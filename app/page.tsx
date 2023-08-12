@@ -39,7 +39,7 @@ export default function Home() {
 
 
   return (
-    <main className="h-screen w-screen">
+    <main className="h-screen w-screen overflow-hidden">
         <SpaceBackground />
         <div className={`page ${navigationClass}`}>
             <Landing navigateTo={navigateTo} />
