@@ -18,7 +18,7 @@ const SpaceBackground = () => (
 )
 
 export default function Home() {
-    const [navigationClass, setNavigationClass] = useState<NavigationClassTypes>('move-up')
+    const [navigationClass, setNavigationClass] = useState<NavigationClassTypes>('move-right')
 
     const navigateTo = (page: PageTypes) => {
         switch (page) {
@@ -41,7 +41,7 @@ export default function Home() {
   return (
     <main className="h-screen w-screen overflow-hidden">
         <SpaceBackground />
-        <div className={`page ${navigationClass}`}>
+        <div className={`duration-600 transition ${navigationClass}`}>
             <Landing navigateTo={navigateTo} />
             <AboutMe navigateTo={navigateTo} />
             <MyWork navigateTo={navigateTo} />
