@@ -4,10 +4,12 @@ import { PageProps } from "@/utils/types"
 import Tilt from 'react-parallax-tilt'
 
 const MinifiedProject = () => (
-    <Tilt className="w-[200px] h-[200px] shrink-0 bg-red-400 rounded parallax-effect" perspective={500} tiltReverse glareEnable={true} glareMaxOpacity={0.8} glareColor="lightblue" glarePosition="all" glareBorderRadius="4px">
-        <button className="inner-element w-full h-full flex justify-center items-center opacity-70">
-            <p className="font-medium text-2xl">TESTERINO</p>
-        </button>
+    <Tilt className="w-[200px] h-[200px] shrink-0 bg-red-400 p-1 rounded parallax-effect" perspective={500} tiltReverse glareEnable={true} glareMaxOpacity={0.8} glareColor="lightblue" glarePosition="all" glareBorderRadius="4px">
+        <div className="h-40 parallax-effect rounded-t bg-green-300">
+            <button className="h-40 w-full inner-element flex justify-center items-center">
+                <p className="font-medium text-2xl opacity-90 text-white">TESTERINO -></p>
+            </button>
+        </div>
     </Tilt>
 )
 

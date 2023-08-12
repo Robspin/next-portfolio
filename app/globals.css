@@ -89,10 +89,8 @@
         transform-style: preserve-3d;
     }
 
-    .parallax-inherit {
-        opacity: 0.7;
-        /*transform-style: preserve-3d;*/
-        perspective: inherit;
+    .clip-path {
+        clip-path: polygon(0% 0%, 80% 0%, 100% 20%, 100% 100%, 100% 100%, 0% 100%, 0% 80%, 0% 20%);
     }
 
     .inner-element {
