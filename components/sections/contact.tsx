@@ -13,6 +13,8 @@ const Astronaut = ({ ...props }) => {
     const { scene, animations } = useLoader(GLTFLoader, '/assets/astronaut_dancing/scene.gltf')
     const { actions, mixer } = useAnimations(animations, group)
 
+    // model author attribution
+    // https://skfb.ly/oHDRW) by teknikfyndet is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 
     useEffect(() => {
         // @ts-ignore
