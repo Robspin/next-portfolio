@@ -18,7 +18,7 @@ const SpaceBackground = () => (
 )
 
 export default function Home() {
-    const [navigationClass, setNavigationClass] = useState<NavigationClassTypes>('move-right')
+    const [navigationClass, setNavigationClass] = useState<NavigationClassTypes>('move-down')
 
     const navigateTo = (page: PageTypes) => {
         switch (page) {

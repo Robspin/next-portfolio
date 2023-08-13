@@ -6,7 +6,7 @@ type Props = {
 }
 
 const PageContainer = ({ children, className = '' }: Props) => (
-    <div className={`absolute flex h-screen w-screen justify-center p-6 ${className}`}>
+    <div className={`absolute flex h-screen w-screen justify-center ${className}`}>
         {children}
     </div>
 )

@@ -94,7 +94,7 @@
     }
 
     .inner-element {
-        transform: translateZ(60px);
+        transform: translateZ(80px);
     }
 
     @keyframes fill {

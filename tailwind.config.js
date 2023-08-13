@@ -15,6 +15,16 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      keyframes: {
+        "horizontal-scroll": {
+          '0%': { transform: 'translate3d(0, 0, 0)' },
+          '100%': { transform: 'translate3d(-50%, 0, 0)' },
+        }
+      },
+      animation: {
+        "endless-scroll": 'horizontal-scroll 5s linear infinite',
+        "endless-scroll-delay": 'horizontal-scroll 2.5s linear infinite delay-[2.5]',
+      }
     },
   },
   plugins: [],
