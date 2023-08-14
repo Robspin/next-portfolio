@@ -4,21 +4,52 @@ import { PageProps } from "@/utils/types"
 import { Canvas } from '@react-three/fiber'
 import { useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import { useEffect, useRef } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { useAnimations } from '@react-three/drei'
 import ContactForm from '@/components/contact-form'
 
 const Astronaut = ({ ...props }) => {
     const group = useRef()
+    // const [reversed, setReversed] = useState(true)
     const { scene, animations } = useLoader(GLTFLoader, '/assets/astronaut_dancing/scene.gltf')
     const { actions, mixer } = useAnimations(animations, group)
 
     // model author attribution
     // https://skfb.ly/oHDRW) by teknikfyndet is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 
+    // const animateWithReverse = useCallback((reversed: boolean) => {
+    //     console.log('reversed: ', reversed)
+    //     const action = actions['Armature.001|DANCE']
+    //     // @ts-ignore
+    //     action.repetitions = 1
+    //     action.clampWhenFinished = true
+    //     if (reversed) {
+    //         action.timeScale = -1
+    //         action.paused = false
+    //     }
+    //     else {
+    //         action.timeScale = 1
+    //         action.paused = false
+    //     }
+    //     console.log(action)
+    //     // @ts-ignore
+    // }, [reversed])
+    //
+    // const callback = (e: any) => {
+    //     animateWithReverse(reversed)
+    //     setReversed(prev => !prev)
+    // }
+
     useEffect(() => {
+        // mixer.addEventListener('finished', callback)
+        const action = actions['Armature.001|DANCE']
         // @ts-ignore
-        actions['Armature.001|DANCE'].play()
+        // action.clampWhenFinished = true
+        // // @ts-ignore
+        // action.repetitions = 1
+        // @ts-ignore
+        action.play()
+        // return () => mixer.removeEventListener('finished', callback)
     }, [mixer])
 
     return <primitive ref={group} object={scene} {...props} />

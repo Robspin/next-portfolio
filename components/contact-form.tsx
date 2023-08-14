@@ -68,7 +68,7 @@ export default function ContactForm() {
     }
 
     return (
-            <div className="max-md:w-full p-4 rounded border dark:border-gray-600">
+            <div className="max-md:w-full p-4 rounded border dark:border-gray-600 bg-black">
                 <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 md:min-w-[400px] min-w-[400px}">
                         <FormField
