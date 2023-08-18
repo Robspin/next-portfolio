@@ -3,10 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-    .heading-name {
-        text-transform: uppercase;
-    }
-
     .heading-effect {
         position: relative;
         color: transparent;
@@ -87,10 +83,6 @@
 
     .parallax-effect {
         transform-style: preserve-3d;
-    }
-
-    .clip-path {
-        clip-path: polygon(0% 0%, 80% 0%, 100% 20%, 100% 100%, 100% 100%, 0% 100%, 0% 80%, 0% 20%);
     }
 
     .inner-element {

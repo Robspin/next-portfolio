@@ -64,7 +64,7 @@ const Contact = ({ navigateTo }: PageProps) => {
                     <Canvas>
                         <directionalLight intensity={0.75} />
                         <ambientLight intensity={0.25} />
-                        <Astronaut position={[0,-2.5,0]} />
+                        <Astronaut position={[0,-3.2,0]} rotation={[-0.4, 0, 0]} />
                     </Canvas>
                 </div>
                 <div className="-mt-8 max-lg:w-full max-lg:px-8">
