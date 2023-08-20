@@ -60,14 +60,14 @@ const Contact = ({ navigateTo }: PageProps) => {
         <PageContainer className="translate-x-[100vw]">
             <NavigationButton onClick={() => navigateTo('aboutMe')} text="contact" className="button-vertical-left" vertical />
             <div className="lg:p-24 w-full h-full flex justify-center items-center flex-col">
-                <div className="h-52 w-full pointer-events-none -mt-8 max-lg:w-full max-lg:px-8">
+                <div className="h-52 w-full pointer-events-none -mt-8 max-md:w-full max-md:px-16">
                     <Canvas>
                         <directionalLight intensity={0.75} />
                         <ambientLight intensity={0.25} />
                         <Astronaut position={[0,-3.2,0]} rotation={[-0.4, 0, 0]} />
                     </Canvas>
                 </div>
-                <div className="-mt-8 max-lg:w-full max-lg:px-8">
+                <div className="-mt-8 max-md:w-full max-sm:px-8 max-md:px-16">
                     <ContactForm />
                 </div>
             </div>
