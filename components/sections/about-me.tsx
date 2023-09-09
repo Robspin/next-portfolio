@@ -11,8 +11,8 @@ const AboutMe = ({ navigateTo }: PageProps) => {
                 <BioTimelineSwitcher>
                     <div className="flex max-md:flex-col pb-24">
                         <div className="max-md:self-center">
-                            <div className="rounded overflow-hidden md:mr-8 max-md:mb-8">
-                                <Image src="/assets/projects/akira/shotaro.png" alt="shotaro" height={320} width={320}/>
+                            <div className="rounded overflow-hidden md:mr-8 max-md:mb-6">
+                                <Image src="/assets/projects/akira/shotaro.png" alt="shotaro" height={340} width={340}/>
                             </div>
                         </div>
                         <div className="h-full bg-green-300 opacity-80 rounded border border-red-400">
