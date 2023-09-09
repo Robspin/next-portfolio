@@ -1,17 +1,10 @@
 'use client'
-import { ReactNode, useState } from 'react'
+import { useState } from 'react'
+import Bio from '@/components/bio'
+import Timeline from '@/components/timeline'
+import Image from 'next/image'
 
-type Props = {
-    children: ReactNode
-}
-
-const Timeline = () => {
-    return <div className="text-white lg:w-[1024px]">
-        timeline
-    </div>
-}
-
-export default function BioTimelineSwitcher({ children }: Props) {
+export default function BioTimelineSwitcher() {
     const [showTimeline, setShowTimeline] = useState(false)
 
     return (
@@ -19,7 +12,14 @@ export default function BioTimelineSwitcher({ children }: Props) {
             <div className="mt-8 mb-4 flex max-md:justify-center md:justify-end">
                 <button onClick={() => setShowTimeline(!showTimeline)} className="text-white border-b border-b-transparent hover:border-b-white">view {showTimeline ? 'bio' : 'timeline'}</button>
             </div>
-            {showTimeline ? <Timeline /> : children}
+            <div className="flex max-md:flex-col pb-24 min-w-[220px]">
+                <div className="max-md:self-center">
+                    <div className="rounded overflow-hidden max-md:mb-6">
+                        <Image src="/assets/projects/akira/shotaro.png" alt="shotaro" height={280} width={280}/>
+                    </div>
+                </div>
+            {showTimeline ? <Timeline /> : <Bio />}
+            </div>
         </div>
     )
 }
