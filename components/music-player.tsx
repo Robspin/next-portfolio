@@ -1,9 +1,23 @@
 'use client'
-import { useAtom } from 'jotai'
-import { musicIsPlayingAtom } from '@/utils/atoms'
+import { useEffect, useState } from 'react'
+
+const music = new Audio('assets/music/Moon-Landing-Countdown.mp3')
+music.volume = 0.3
+music.loop = true
+
+const useMusicPlayer = () => {
+    const [isPlaying, setIsPlaying] = useState(false)
+
+    useEffect(() => {
+        if (isPlaying) music.play()
+        else music.pause()
+    }, [isPlaying])
+
+    return { isPlaying, setIsPlaying }
+}
 
 export default function MusicPlayer() {
-    const [isPlaying, setIsPlaying] = useAtom(musicIsPlayingAtom)
+    const { isPlaying, setIsPlaying } = useMusicPlayer()
 
     return (
         <button className="-mt-4" onClick={() => setIsPlaying(!isPlaying)}>
