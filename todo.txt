@@ -1,0 +1,10 @@
+Points:
+
+- Fix css landing animation
+- Popout menu
+- Finish about me
+- Top navbar on multiple views
+- Top navbar appear transition
+- Prepare mock Project (or real one)
+- Glassmorphism popout menu effect
+- Viewcounter

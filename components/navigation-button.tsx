@@ -11,7 +11,7 @@ type Props = {
 
 const NavigationButton = ({ onClick, text, className, vertical, ...props }: Props) => {
     return (
-        <div onClick={onClick} {...props} className={`absolute select-none uppercase border border-white text-white cursor-pointer bg-black ${vertical ? 'button-vertical px-2 py-3' : 'px-4 py-2'} font-bold tracking-[0.2em] ${className}`}>
+        <div onClick={onClick} {...props} className={`absolute select-none uppercase border border-white text-white cursor-pointer bg-black ${vertical ? 'button-vertical p-2 md:px-2 md:py-3' : 'p-2 md:px-4 md:py-2'} font-bold tracking-[5px] ${className}`}>
             {text}
         </div>
     )

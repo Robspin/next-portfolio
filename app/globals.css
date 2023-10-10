@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+    * {
+        font-family: 'Raleway', sans-serif;
+    }
+
     .heading-effect {
         position: relative;
         color: transparent;

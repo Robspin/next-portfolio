@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'dark-text-secondary': '#a8a29e'
+      },
       transitionDuration: {
         '600': '600ms',
       },

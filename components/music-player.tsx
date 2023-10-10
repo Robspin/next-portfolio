@@ -20,7 +20,7 @@ export default function MusicPlayer() {
     const { isPlaying, setIsPlaying } = useMusicPlayer()
 
     return (
-        <button className="-mt-4" onClick={() => setIsPlaying(!isPlaying)}>
+        <button className="-mt-4 px-4" onClick={() => setIsPlaying(!isPlaying)}>
             <svg xmlns="http://www.w3.org/2000/svg"
                  width="0.577778in" height="0.411111in"
                  viewBox="0 0 52 37">
