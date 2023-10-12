@@ -1,14 +1,14 @@
 'use client'
 import { useEffect, useState } from 'react'
 
-const music = new Audio('assets/music/Moon-Landing-Countdown.mp3')
-music.volume = 0.3
-music.loop = true
-
 const useMusicPlayer = () => {
     const [isPlaying, setIsPlaying] = useState(false)
 
     useEffect(() => {
+        const music = new Audio('assets/music/Moon-Landing-Countdown.mp3')
+        music.volume = 0.3
+        music.loop = true
+
         if (isPlaying) music.play()
         else music.pause()
     }, [isPlaying])

@@ -6,19 +6,21 @@ export default function Bio() {
                         Hi! Robin here. <br/>
                         <br/>
                         Let me share a bit about myself.<br/>
-                        Before I was a Javascript fanboy I used to fix cars for a living.<br/>
-                        But after reaching a ceiling and not seeing a future for myself in the car industry I
-                        quit.<br/>
+                        A while ago I used to fix cars for a living.<br/>
+                        Now I am a Javascript fanboy who loves tinkering in frontend code.<br/>
                         <br/>
-                        I traveled for some time and ended up living in Japan for a while and studied Japanese.<br/>
-                        Figured that if I could learn Japanese I could probably also learn to code.<br/>
-                        That's where my coding journey started! <br/>
+                        I enjoyed working at Tracefy for over 2,5 years, a late stage startup company focussing on gps solutions and preventing bicycle theft.<br/>
+                        Because we had a small team I had a wide variety of responsibilities.<br/>
+                        For example:<br/>
+                        - Creating web applications (mostly with react)<br/>
+                        - Creating small backend services<br/>
+                        - Designing new features<br/>
+                        - Helped designing the new micro-architecture landscape<br/>
+                        - Drawed out our existing micro-architecture to create stability<br/>
+                        - Designed the new Tracefy app.<br/>
+                        - Built the new Tracefy app leading a team with two external developers<br/>
                         <br/>
-                        After learning myself the basics of web development I focussed on react. <br/>
-                        Started freelancing and building a portfolio.<br/>
-                        Then after a while I got hired by Tracefy a late stage startup in creating anti-theft
-                        tracking solutions for e-Bikes.<br/>
-                        Where I am still working to this day. <br/>
+                        The last few years where quite the ride.<br/>
                         <br/>
                     </p>
                 </div>

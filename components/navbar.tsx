@@ -17,7 +17,7 @@ import Logo from '@/components/logo'
 
 export default function Navbar() {
     return (
-        <div className="absolute flex justify-between items-center w-full p-3 md:p-5">
+        <div className="absolute flex justify-between items-center w-full p-3 max-sm:pl-0 md:p-5">
             <PopoutMenu />
             <MusicPlayer />
         </div>
