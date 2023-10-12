@@ -9,18 +9,19 @@ export default function Bio() {
                         A while ago I used to fix cars for a living.<br/>
                         Now I am a Javascript fanboy who loves tinkering in frontend code.<br/>
                         <br/>
-                        I enjoyed working at Tracefy for over 2,5 years, a late stage startup company focussing on gps solutions and preventing bicycle theft.<br/>
+                        For the past 2,5 years I have been working at Tracefy, a late stage startup focussing on gps solutions and preventing e-bike theft.<br/>
                         Because we had a small team I had a wide variety of responsibilities.<br/>
                         For example:<br/>
-                        - Creating web applications (mostly with react)<br/>
+                        - Creating web applications<br/>
                         - Creating small backend services<br/>
                         - Designing new features<br/>
-                        - Helped designing the new micro-architecture landscape<br/>
-                        - Drawed out our existing micro-architecture to create stability<br/>
-                        - Designed the new Tracefy app.<br/>
-                        - Built the new Tracefy app leading a team with two external developers<br/>
+                        - Helping to design the new micro-architecture landscape<br/>
+                        - Drawing out our existing micro-architecture to create stability<br/>
+                        - Designing the new Tracefy app.<br/>
+                        - Building the new Tracefy app leading a team with two external developers<br/>
+                        - Teaching react and react-native to interns and external developers<br/>
                         <br/>
-                        The last few years where quite the ride.<br/>
+                        The last few years where quite the ride to say the least.<br/>
                         <br/>
                     </p>
                 </div>
