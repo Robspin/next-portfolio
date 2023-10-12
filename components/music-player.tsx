@@ -2,13 +2,12 @@
 import { useEffect, useState } from 'react'
 
 const useMusicPlayer = () => {
+    const [music] = useState(new Audio('assets/music/Moon-Landing-Countdown.mp3'))
     const [isPlaying, setIsPlaying] = useState(false)
+    music.volume = 0.3
+    music.loop = true
 
     useEffect(() => {
-        const music = new Audio('assets/music/Moon-Landing-Countdown.mp3')
-        music.volume = 0.3
-        music.loop = true
-
         if (isPlaying) music.play()
         else music.pause()
     }, [isPlaying])
