@@ -22,11 +22,16 @@ module.exports = {
         "horizontal-scroll": {
           '0%': { transform: 'translate3d(0, 0, 0)' },
           '100%': { transform: 'translate3d(-50%, 0, 0)' }
+        },
+        "opacity-appear": {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 100 },
         }
       },
       animation: {
         "endless-scroll": 'horizontal-scroll 5s linear infinite',
         "endless-scroll-delay": 'horizontal-scroll 2.5s linear infinite delay-[2.5]',
+        "appear": 'opacity-appear 1s ease'
       }
     },
   },
