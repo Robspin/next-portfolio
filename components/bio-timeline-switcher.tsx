@@ -10,7 +10,7 @@ export default function BioTimelineSwitcher() {
     return (
         <div className="max-w-[1024px] max-md:py-20 max-md:px-6 md:p-24">
             <div className="mt-8 mb-4 flex max-md:justify-center md:justify-end">
-                <button onClick={() => setShowTimeline(!showTimeline)} className="text-white border-b border-b-transparent hover:border-b-white">view {showTimeline ? 'bio' : 'timeline'}</button>
+                <button onClick={() => setShowTimeline(!showTimeline)} className="text-white border-b border-b-transparent hover:border-b-white select-none">view {showTimeline ? 'bio' : 'timeline'}</button>
             </div>
             <div className="flex max-md:flex-col pb-24 min-w-[220px]">
                 <div className="max-md:self-center">
