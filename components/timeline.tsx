@@ -1,5 +1,4 @@
-import { ReactNode } from 'react'
-import LucideIcon, { IconProps } from '@/components/lucide-icon'
+import LucideIcon, { IconProps } from '@/components/svgs/lucide-icon'
 
 type TimelineItemProps = {
     title: string

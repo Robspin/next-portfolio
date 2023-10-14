@@ -1,7 +1,5 @@
 Points:
 
-- Finish about me
-- Finish timeline component
 - Top navbar on multiple views
 - Top navbar appear transition
 - Prepare mock Project (or real one, IE S1)

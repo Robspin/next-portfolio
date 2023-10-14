@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/navigation-menu"
 
 import MusicPlayer from '@/components/music-player'
-import Logo from '@/components/logo'
+import Logo from '@/components/svgs/logo'
 
 
 export default function Navbar() {
