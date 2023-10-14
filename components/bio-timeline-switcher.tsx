@@ -8,14 +8,14 @@ export default function BioTimelineSwitcher() {
     const [showTimeline, setShowTimeline] = useState(false)
 
     return (
-        <div className="max-w-[1024px] max-md:py-20 max-md:px-6 md:p-24">
+        <div className="max-w-[1024px] max-md:py-20 max-md:px-[60px] md:p-24">
             <div className="mt-8 mb-4 flex max-md:justify-center md:justify-end">
                 <button onClick={() => setShowTimeline(!showTimeline)} className="text-white border-b border-b-transparent hover:border-b-white select-none">view {showTimeline ? 'bio' : 'timeline'}</button>
             </div>
             <div className="flex max-md:flex-col pb-24 min-w-[220px]">
-                <div className="max-md:self-center">
-                    <div className="rounded overflow-hidden max-md:mb-6">
-                        <Image src="/assets/projects/akira/shotaro.png" alt="shotaro" height={280} width={280}/>
+                <div className="max-md:self-center h-40 w-40 max-md:mb-8">
+                    <div className="rounded h-40 w-40 overflow-hidden grayscale-[55%] mr-4 border border-gray-200">
+                        <Image src="/assets/images/randomguy.jpeg" alt="randomguy" height={220} width={220} />
                     </div>
                 </div>
             {showTimeline ? <Timeline /> : <Bio />}

@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Solution1() {
     return (
-        <div className="max-lg:mx-6 py-6 lg:py-24 lg:h-screen lg:overflow-auto">
+        <div className="max-lg:mr-[60px] max-lg:ml-6 py-6 lg:py-24 lg:h-screen lg:overflow-auto">
             <div className="bg-green-300 opacity-80 lg:mr-24 rounded p-8 border border-red-400">
                 <div className="flex justify-between border-b border-b-green-600">
                     <h2 className="tracking-tighter max-sm:text-5xl text-6xl pr-2 font-bold">Solution 1</h2>
@@ -12,9 +12,9 @@ export default function Solution1() {
                 <div className="xl:flex mt-4">
                     <p className="max-xl:mb-8 xl:mr-14">
                         This project came to life when I started playing with the idea of freelancing again.
-                        Without any real plans at the time, I wanted to test my skills and see how fast I could create a brand, website and functional contact form.
+                        Without any real plans at the time, I wanted to test my skills and see how fast I could create a brand and website.
                         The requirements were:
-                        - Clean and simple design
+                        - Clean and simple responsive design
                         - Use transitions and small animations
                         - Have a working contact form solution
                         - Have a working good looking website fast

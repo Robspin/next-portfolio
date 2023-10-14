@@ -67,7 +67,7 @@ const Contact = ({ navigateTo }: PageProps) => {
                         <Astronaut position={[0,-3.2,0]} rotation={[-0.4, 0, 0]} />
                     </Canvas>
                 </div>
-                <div className="-mt-8 max-md:w-full max-sm:px-8 max-md:px-16">
+                <div className="-mt-8 max-md:w-full max-sm:px-[60px] max-md:px-16">
                     <ContactForm />
                 </div>
             </div>

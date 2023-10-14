@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef } from "react"
 import { useFrame, useLoader } from "@react-three/fiber"
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
-import starPng from '@/public/assets/star.png'
+import starPng from '@/public/assets/images/star.png'
 
 const Stars = ({ startingZ }: { startingZ: number }) => {
     const count = 1000

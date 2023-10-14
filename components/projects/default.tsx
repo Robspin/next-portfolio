@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function DefaultProject() {
     return (
-        <div className="max-lg:mx-6 py-6 lg:py-24 lg:h-screen lg:overflow-auto">
+        <div className="max-lg:mr-[60px] max-lg:ml-6 py-6 lg:py-24 lg:h-screen lg:overflow-auto">
             <div className="bg-green-300 opacity-80 lg:mr-24 rounded p-8 border border-red-400">
                 <div className="flex justify-between border-b border-b-green-600">
                     <h2 className="tracking-tighter text-6xl pr-2 font-bold">PROJECT TITLE</h2>
