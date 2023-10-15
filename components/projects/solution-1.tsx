@@ -17,7 +17,6 @@ const Solution1LogoShort = ({ ...props }) => (
     </svg>
 )
 
-
 export default function Solution1() {
     return (
         <div className="max-lg:mr-[60px] max-lg:ml-6 py-6 lg:py-24 lg:h-screen lg:overflow-auto">
@@ -82,7 +81,7 @@ export default function Solution1() {
                         Framer-motion was a interesting developer experience for implementing scroll based transitions and animations<br/>
                         I will likely use the library again in the future.<br/>
                         For the contact form I ended up using the shadcn components and used node-mailer as a backend solution for sending the emails<br/>
-                        In the end it took me a bit over a weekend to create<br/>
+                        In the end it took me a bit over a weekend to create.<br/>
                     </div>
                     <h4 className="text-lg font-bold mb-2">Links and information</h4>
                     <ul className="pl-4 list-disc mb-8">
