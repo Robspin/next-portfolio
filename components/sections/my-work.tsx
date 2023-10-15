@@ -26,7 +26,11 @@ interface ProjectComponentProps extends ProjectProps {
 
 const MinifiedProject = ({ name, slug, onClick, activeProject, videoDisabled }: ProjectComponentProps) => {
     const isActiveProject = slug === activeProject
-    const isLargeScreen = window.innerWidth > 600
+    let isLargeScreen = true
+
+    if (typeof window !== 'undefined') {
+        isLargeScreen = window.innerWidth > 600
+    }
 
     return (
         <Tilt className={`group w-[200px] h-[200px] shrink-0 bg-red-400 p-1 rounded parallax-effect transition ${isActiveProject ? 'shadow-custom' : 'shadow-none'} shadow-violet-200`} perspective={500}
