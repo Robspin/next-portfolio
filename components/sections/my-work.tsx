@@ -1,5 +1,5 @@
 'use client'
-import { Dispatch, useState } from 'react'
+import { useState } from 'react'
 import NavigationButton from "@/components/navigation-button"
 import PageContainer from "@/components/page-container"
 import { PageProps } from "@/utils/types"
@@ -9,6 +9,7 @@ import Image from 'next/image'
 import DefaultProject from '@/components/projects/default'
 import Solution1 from '@/components/projects/solution-1'
 import WebsiteIcon from '@/components/svgs/website'
+import { AnimatePresence } from 'framer-motion'
 
 type ProjectSlug = 'default' | 'solution1'
 
@@ -61,9 +62,9 @@ const MyWork = ({ navigateTo }: PageProps) => {
     const renderProject = () => {
         switch (activeProject) {
             case 'solution1':
-                return <Solution1 />
+                return <Solution1 key="solution1" />
             default:
-                return <DefaultProject />
+                return <DefaultProject key="defaultProject" />
         }
     }
 
@@ -75,7 +76,11 @@ const MyWork = ({ navigateTo }: PageProps) => {
                     {projects.map(({ name, slug}, index) =>
                         <MinifiedProject name={name} slug={slug} activeProject={activeProject} key={index} onClick={() => setActiveProject(slug)} videoDisabled />)}
                 </div>
-                {renderProject()}
+                <div className="flex flex-col">
+                    <AnimatePresence>
+                         {renderProject()}
+                    </AnimatePresence>
+                </div>
             </div>
         </PageContainer>
     )

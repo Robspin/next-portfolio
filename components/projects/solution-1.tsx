@@ -3,6 +3,7 @@ import WebsiteIcon from '@/components/svgs/website'
 import Github from '@/components/svgs/github'
 import Eye from '@/components/svgs/eye'
 import ExternalALink from '@/components/external-a-link'
+import { motion } from 'framer-motion'
 
 const Solution1LogoFull = ({ ...props }) => (
     <svg {...props} width="47" height="18" viewBox="0 0 47 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -19,87 +20,93 @@ const Solution1LogoShort = ({ ...props }) => (
 
 export default function Solution1() {
     return (
-        <div className="max-lg:mr-[60px] max-lg:ml-6 py-6 lg:py-24 lg:h-screen lg:overflow-auto">
-            <div className="bg-green-300 opacity-80 lg:mr-24 rounded p-8 border border-red-400">
-                <div className="flex justify-between items-center border-b border-b-green-600">
-                    <h2 className="tracking-tighter max-sm:text-5xl text-6xl pr-2 font-bold">Solution 1</h2>
-                    <WebsiteIcon className="h-10 w-10 fill-gray-700 max-sm:hidden" />
-                </div>
-                <div className="flex max-md:flex-col justify-between mb-6">
-                    <h3 className="tracking-tight mt-1 text-xl font-bold text-red-600">Frontend Developer - Designer</h3>
-                    <div className="flex py-2 gap-3">
-                        <a href="https://next-solution1.vercel.app/" target="_blank">
-                            <Eye className="h-6 w-6 fill-gray-700 hover:fill-black transition" />
-                        </a>
-                        <a href="https://github.com/Robspin/next-solution1" target="_blank">
-                            <Github className="h-6 w-6 fill-gray-700 hover:fill-black transition" />
-                        </a>
+        <motion.div
+            initial={{ opacity: 0, y: 200 }}
+            animate={{ opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.5 } }}
+            exit={{ opacity: 0, y: 200, transition: { duration: 0.3 } }}
+        >
+            <div className="max-lg:mr-[60px] max-lg:ml-6 py-6 lg:py-24 lg:h-screen lg:overflow-auto">
+                <div className="bg-green-300 opacity-80 lg:mr-24 rounded p-8 border border-red-400">
+                    <div className="flex justify-between items-center border-b border-b-green-600">
+                        <h2 className="tracking-tighter max-sm:text-5xl text-6xl pr-2 font-bold">Solution 1</h2>
+                        <WebsiteIcon className="h-10 w-10 fill-gray-700 max-sm:hidden" />
                     </div>
-                </div>
-                <div className="mt-4">
-                    <div className="xl:flex">
-                        <div className="mb-4 xl:mr-16">
-                            <div className="mb-8">
-                                This project came to life when I started playing with the idea of freelancing again.<br/>
-                                Without any real plans at the time, I wanted to test my skills and see how fast I could create a brand and website.<br/>
-                                It was also a great opportunity to play with framer-motion as an animation library<br/>
+                    <div className="flex max-md:flex-col justify-between mb-6">
+                        <h3 className="tracking-tight mt-1 text-xl font-bold text-red-600">Frontend Developer - Designer</h3>
+                        <div className="flex py-2 gap-3">
+                            <a href="https://next-solution1.vercel.app/" target="_blank">
+                                <Eye className="h-6 w-6 fill-gray-700 hover:fill-black transition" />
+                            </a>
+                            <a href="https://github.com/Robspin/next-solution1" target="_blank">
+                                <Github className="h-6 w-6 fill-gray-700 hover:fill-black transition" />
+                            </a>
+                        </div>
+                    </div>
+                    <div className="mt-4">
+                        <div className="xl:flex">
+                            <div className="mb-4 xl:mr-16">
+                                <div className="mb-8">
+                                    This project came to life when I started playing with the idea of freelancing again.<br/>
+                                    Without any real plans at the time, I wanted to test my skills and see how fast I could create a brand and website.<br/>
+                                    It was also a great opportunity to play with framer-motion as an animation library<br/>
+                                </div>
+                                <div>
+                                    The requirements were:
+                                </div>
+                                <ul className="pl-4 list-disc mb-8">
+                                    <li>Clean and simple responsive design</li>
+                                    <li>Use transitions and small animations</li>
+                                    <li>Have a working contact form solution</li>
+                                    <li>Have a working good looking website fast</li>
+                                </ul>
                             </div>
-                            <div>
-                                The requirements were:
-                            </div>
-                            <ul className="pl-4 list-disc mb-8">
-                                <li>Clean and simple responsive design</li>
-                                <li>Use transitions and small animations</li>
-                                <li>Have a working contact form solution</li>
-                                <li>Have a working good looking website fast</li>
-                            </ul>
-                        </div>
-                        <div className="md:max-w-[400px] flex flex-col border border-green-600 mb-8">
-                            <Image className="ml-auto" src="/assets/projects/solution1/card.jpeg" alt="akira" height={300} width={1100} />
-                            <div className="flex justify-center py-2 gap-4 border-t border-t-green-600 flex-wrap">
-                                {['react', 'tailwind', 'figma', 'typescript', 'framer-motion'].map((tech, i) => <div key={i} className="px-2 py-1 text-xs bg-red-400 rounded-3xl font-medium tracking-wider">{tech}</div>)}
+                            <div className="md:max-w-[400px] flex flex-col border border-green-600 mb-8">
+                                <Image className="ml-auto" src="/assets/projects/solution1/card.jpeg" alt="solution1" height={300} width={1100} />
+                                <div className="flex justify-center py-2 gap-4 border-t border-t-green-600 flex-wrap">
+                                    {['react', 'tailwind', 'figma', 'typescript', 'framer-motion'].map((tech, i) => <div key={i} className="px-2 py-1 text-xs bg-red-400 rounded-3xl font-medium tracking-wider">{tech}</div>)}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <h4 className="text-lg font-bold mb-2">Design</h4>
-                    <div className="mb-8 mr-14">
-                        After a few sketches I had an idea for which direction I wanted to go.<br/>
-                        For the color scheme I chose a light blue tint color that also worked in light mode.<br/>
-                        It was fun creating the solution 1 logo icons.
-                    </div>
-                    <div className="py-4 flex gap-8 mb-8">
-                        <div className="bg-black rounded lg p-4">
-                            <Solution1LogoShort className="h-10 w-10 fill-white"  />
+                        <h4 className="text-lg font-bold mb-2">Design</h4>
+                        <div className="mb-8 md:mr-14">
+                            After a few sketches I had an idea for which direction I wanted to go.<br/>
+                            For the color scheme I chose a light blue tint color that also worked in light mode.<br/>
+                            It was fun creating the solution 1 logo icons.
                         </div>
-                        <div className="bg-black rounded lg p-4">
-                            <Solution1LogoFull className="h-10 w-32 fill-white" />
+                        <div className="py-4 flex max-sm:flex-col gap-8 mb-8">
+                            <div className="bg-black rounded lg p-4">
+                                <Solution1LogoShort className="h-10 w-10 fill-white"  />
+                            </div>
+                            <div className="bg-black rounded lg p-4">
+                                <Solution1LogoFull className="h-10 w-32 fill-white" />
+                            </div>
                         </div>
+                        <h4 className="text-lg font-bold mb-2">Development</h4>
+                        <div className="mb-8 md:mr-14">
+                            My framework of choice is React in combination with Nextjs<br/>
+                            Framer-motion was a interesting developer experience for implementing scroll based transitions and animations<br/>
+                            I will likely use the library again in the future.<br/>
+                            For the contact form I ended up using the shadcn components and used node-mailer as a backend solution for sending the emails<br/>
+                            In the end it took me a bit over a weekend to create.<br/>
+                        </div>
+                        <h4 className="text-lg font-bold mb-2">Links and information</h4>
+                        <ul className="pl-4 list-disc mb-8">
+                            <ExternalALink href="https://next-solution1.vercel.app">
+                                <li>View the website</li>
+                            </ExternalALink>
+                            <ExternalALink href="https://github.com/Robspin/next-solution1">
+                                <li>View the code</li>
+                            </ExternalALink>
+                            <ExternalALink href="https://www.framer.com/motion/introduction/">
+                                <li>Framer-motion</li>
+                            </ExternalALink>
+                            <ExternalALink href="https://ui.shadcn.com/">
+                                <li>Shadcn</li>
+                            </ExternalALink>
+                        </ul>
                     </div>
-                    <h4 className="text-lg font-bold mb-2">Development</h4>
-                    <div className="mb-8 mr-14">
-                        My framework of choice is React in combination with Nextjs<br/>
-                        Framer-motion was a interesting developer experience for implementing scroll based transitions and animations<br/>
-                        I will likely use the library again in the future.<br/>
-                        For the contact form I ended up using the shadcn components and used node-mailer as a backend solution for sending the emails<br/>
-                        In the end it took me a bit over a weekend to create.<br/>
-                    </div>
-                    <h4 className="text-lg font-bold mb-2">Links and information</h4>
-                    <ul className="pl-4 list-disc mb-8">
-                        <ExternalALink href="https://next-solution1.vercel.app">
-                            <li>View the website</li>
-                        </ExternalALink>
-                        <ExternalALink href="https://github.com/Robspin/next-solution1">
-                            <li>View the code</li>
-                        </ExternalALink>
-                        <ExternalALink href="https://www.framer.com/motion/introduction/">
-                            <li>Framer-motion</li>
-                        </ExternalALink>
-                        <ExternalALink href="https://ui.shadcn.com/">
-                            <li>Shadcn</li>
-                        </ExternalALink>
-                    </ul>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }

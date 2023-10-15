@@ -25,7 +25,11 @@ module.exports = {
         },
         "opacity-appear": {
           '0%': { opacity: 0 },
-          '100%': { opacity: 100 },
+          '100%': { opacity: 1 },
+        },
+        "opacity-appear-80": {
+          '0%': { opacity: 0 },
+          '100%': { opacity: .8 },
         },
         "opacity-disappear": {
           '0%': { opacity: 100 },
@@ -44,6 +48,7 @@ module.exports = {
         "endless-scroll": 'horizontal-scroll 5s linear infinite',
         "endless-scroll-delay": 'horizontal-scroll 2.5s linear infinite delay-[2.5]',
         "appear": 'opacity-appear 1s ease',
+        "appear-80": 'opacity-appear-80 1s ease',
         "disappear": 'opacity-disappear 2.5s ease',
         "fill": 'fill-width 1s ease-in-out',
         "empty": 'empty-width 1.5s ease-in'
