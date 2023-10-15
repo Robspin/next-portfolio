@@ -7,7 +7,7 @@ import Landing from '@/components/sections/landing'
 import AboutMe from '@/components/sections/about-me'
 import MyWork from '@/components/sections/my-work'
 import Contact from '@/components/sections/contact'
-
+import Loading from '@/components/loading'
 
 const SpaceBackground = () => (
     <div className="h-full w-full absolute bg-black">
@@ -47,6 +47,7 @@ export default function Home() {
             <MyWork navigateTo={navigateTo} />
             <Contact navigateTo={navigateTo} />
         </div>
+        <Loading />
     </main>
   )
 }

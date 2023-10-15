@@ -35,7 +35,7 @@ const MinifiedProject = ({ name, slug, onClick, activeProject, videoDisabled }: 
                         {' '}CLICK ME CLICK ME {' '}
                     </EndlessText>
                 </button>}
-                <div className="h-full w-full absolute">
+                <div className="h-full w-full absolute grayscale-[55%]">
                     {/*{!videoDisabled ? <video src={`/assets/projects/${slug}/preview.mov`} autoPlay={true} loop height={200}*/}
                     {/*                                                                        width={200}/> :*/}
                     {/*    <Image src={`/assets/projects/${slug}/card.jpeg`} alt={name} height={200} width={200}/>}*/}

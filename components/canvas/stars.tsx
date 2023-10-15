@@ -1,7 +1,10 @@
+'use client'
 import { useEffect, useMemo, useRef } from "react"
 import { useFrame, useLoader } from "@react-three/fiber"
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import starPng from '@/public/assets/images/star.png'
+import { useAtom } from 'jotai'
+import { backgroundLoadingAtom } from '@/utils/atoms'
 
 const Stars = ({ startingZ }: { startingZ: number }) => {
     const count = 1000
@@ -29,12 +32,8 @@ const Stars = ({ startingZ }: { startingZ: number }) => {
         return new Float32Array(positions)
     }, [count])
 
-    useEffect(() => {
-        starsRef.current.position.z = startingZ
-    }, [])
-
     return (
-        <points ref={starsRef}>
+        <points ref={starsRef} position={[0, 0, startingZ]}>
             <bufferGeometry attach="geometry" >
                 <bufferAttribute
                     attach={'attributes-position'}
@@ -50,6 +49,11 @@ const Stars = ({ startingZ }: { startingZ: number }) => {
 }
 
 export default function StarsLoop() {
+    const [, setBackgroundLoading] = useAtom(backgroundLoadingAtom)
+
+    useEffect(() => {
+        setBackgroundLoading(false)
+    }, [])
 
     return (
         <>
