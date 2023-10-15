@@ -14,8 +14,8 @@ const TimelineItem = ({ title, timeframe, description, iconName }: TimelineItemP
     return (
         <li className="mb-10 ml-6">
             <span
-                className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-green-900">
-                <LucideIcon name={iconName} size={16} color="#f2f2f2" />
+                className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-green-400">
+                <LucideIcon name={iconName} size={16} color="black" />
             </span>
             <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">{title}
             </h3>

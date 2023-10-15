@@ -8,6 +8,7 @@ import EndlessText from '@/components/endless-text'
 import Image from 'next/image'
 import DefaultProject from '@/components/projects/default'
 import Solution1 from '@/components/projects/solution-1'
+import WebsiteIcon from '@/components/svgs/website'
 
 type ProjectSlug = 'default' | 'solution1'
 
@@ -39,8 +40,13 @@ const MinifiedProject = ({ name, slug, onClick, activeProject, videoDisabled }: 
                     {/*{!videoDisabled ? <video src={`/assets/projects/${slug}/preview.mov`} autoPlay={true} loop height={200}*/}
                     {/*                                                                        width={200}/> :*/}
                     {/*    <Image src={`/assets/projects/${slug}/card.jpeg`} alt={name} height={200} width={200}/>}*/}
-                    <Image src={`/assets/projects/${slug}/card.jpeg`} alt={name} height={200} width={200}/>
-                    <p className="text-xl text-center mt-1 text-gray-800">{name}</p>
+                    <div className="h-40 w-full">
+                        <Image src={`/assets/projects/${slug}/card.jpeg`} alt={name} height={200} width={200}/>
+                    </div>
+                    <div className="flex items-center justify-center">
+                        <WebsiteIcon className="h-4 w-4 mr-2 mt-1" />
+                        <p className="text-xl text-center mt-1 text-gray-800">{name}</p>
+                    </div>
                 </div>
             </div>
         </Tilt>
