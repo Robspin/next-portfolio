@@ -70,7 +70,7 @@ export default function Timeline() {
     return (
         <div className="text-white lg:w-[1024px] overflow-hidden animate-appear pb-24 pl-8 pt-2">
             <ol className="relative border-l border-gray-200 dark:border-gray-700">
-                {timelineData.map(({ title, timeframe, description, iconName }, index) => <TimelineItem title={title} timeframe={timeframe} description={description} iconName={iconName} />)}
+                {timelineData.map(({ title, timeframe, description, iconName }, index) => <TimelineItem key={title} title={title} timeframe={timeframe} description={description} iconName={iconName} />)}
             </ol>
         </div>
     )

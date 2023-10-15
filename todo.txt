@@ -1,13 +1,10 @@
 Points:
 
 - Section scroll to top onclick navigation button
-- Transitions on project detail and timeline/bio switch
-- Prepare mock Project (or real one, IE S1)
 - Top navbar on multiple views with appear transition
 - Add turn on/off video switch
 
 Optional
 - Automatic bio chat appear using npm package
 - Fix landing text bug
-- Disable tilt on small screens
 - Finish theme and make a bit bold
