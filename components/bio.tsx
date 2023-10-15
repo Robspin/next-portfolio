@@ -11,7 +11,7 @@ export default function Bio() {
                     <br/>
                     For the past 2,5 years I have been working at Tracefy, a late stage startup focussing on gps solutions and preventing e-bike theft.<br/>
                     Because we had a small team I had a wide variety of responsibilities.<br/>
-                    For example:<br/>
+                    I am experienced in:<br/>
                     <ul className="list-disc pl-4 mt-2">
                         <li>Creating web applications</li>
                         <li>Creating small backend services</li>
@@ -23,7 +23,7 @@ export default function Bio() {
                         <li>Teaching react and react-native to interns and external developers</li>
                     </ul>
                     <br/>
-                    If you wish to see some of my past projects head over to my work.<br/>
+                    Wish to see some of my past projects? Please head over to my work.<br/>
                     <br/>
                 </div>
             </div>
