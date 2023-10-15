@@ -27,7 +27,7 @@ interface ProjectComponentProps extends ProjectProps {
 const MinifiedProject = ({ name, slug, onClick, activeProject, videoDisabled }: ProjectComponentProps) => {
     const isActiveProject = slug === activeProject
     return (
-        <Tilt className={`group w-[200px] h-[200px] shrink-0 bg-red-400 p-1 rounded parallax-effect transition ${isActiveProject ? 'shadow-lg' : 'shadow-none'} shadow-purple-200`} perspective={500}
+        <Tilt className={`group w-[200px] h-[200px] shrink-0 bg-red-400 p-1 rounded parallax-effect transition ${isActiveProject ? 'shadow-custom' : 'shadow-none'} shadow-violet-200`} perspective={500}
               tiltReverse glareEnable={true} glareMaxOpacity={0.8} glareColor="lightblue" glarePosition="all"
               glareBorderRadius="4px">
             <div onClick={onClick} className="h-40 parallax-effect flex justify-center rounded-t bg-black">
