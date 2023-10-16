@@ -13,7 +13,7 @@ export default function DefaultProject() {
         animate={{ opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.5 } }}
         exit={{ opacity: 0, y: 200, transition: { duration: 0.3 } }}
     >
-        <div className="max-lg:mr-[60px] max-lg:ml-6 py-6 lg:py-24 lg:h-screen lg:overflow-auto">
+        <div className="max-lg:mr-[60px] max-w-[1048px] max-lg:ml-6 py-6 lg:py-24 lg:h-screen lg:overflow-auto">
             <div className="bg-green-300 opacity-80 lg:mr-24 rounded p-8 border border-red-400">
                 <div className="flex justify-between items-center border-b border-b-green-600">
                     <h2 className="tracking-tighter max-sm:text-5xl text-6xl pr-2 font-bold">Project title</h2>
@@ -46,14 +46,14 @@ export default function DefaultProject() {
                                 <li>Have a working good looking website fast</li>
                             </ul>
                         </div>
-                        <div className="md:max-w-[400px] flex flex-col border border-green-600 mb-8">
+                        <div className="md:max-w-[400px] md:min-w-[400px] flex flex-col border border-green-600 max-lg:mb-8 xl:mb-auto">
                             <Image className="ml-auto" src="/assets/projects/akira/akira-scene.jpeg" alt="akira" height={300} width={1100} />
                             <div className="flex justify-center py-2 gap-4 border-t border-t-green-600 flex-wrap">
                                 {['react', 'tailwind', 'figma', 'typescript', 'framer-motion'].map((tech, i) => <div key={i} className="px-2 py-1 text-xs bg-red-400 rounded-3xl font-medium tracking-wider">{tech}</div>)}
                             </div>
                         </div>
                     </div>
-                    <h4 className="text-lg font-bold mb-2">Design</h4>
+                    <h4 className="text-lg font-bold mb-2 mt-8">Design</h4>
                     <div className="mb-8 md:mr-14">
                         While most of the character designs and settings were adapted from the manga, the plot differs considerably and does not include much of the last half of the manga, which continued publication for two years after the film's release. The soundtrack, which draws heavily from traditional Indonesian gamelan as well as Japanese noh music, was composed by Shōji Yamashiro and performed by Geinoh Yamashirogumi.
                     </div>

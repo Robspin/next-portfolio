@@ -25,7 +25,7 @@ export default function Solution1() {
             animate={{ opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.5 } }}
             exit={{ opacity: 0, y: 200, transition: { duration: 0.3 } }}
         >
-            <div className="max-lg:mr-[60px] max-lg:ml-6 py-6 lg:py-24 lg:h-screen lg:overflow-auto">
+            <div className="max-lg:mr-[60px] max-w-[1048px] max-lg:ml-6 py-6 lg:py-24 lg:h-screen lg:overflow-auto">
                 <div className="bg-green-300 opacity-80 lg:mr-24 rounded p-8 border border-red-400">
                     <div className="flex justify-between items-center border-b border-b-green-600">
                         <h2 className="tracking-tighter max-sm:text-5xl text-6xl pr-2 font-bold">Solution 1</h2>
