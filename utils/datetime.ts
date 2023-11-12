@@ -1,4 +1,4 @@
-export function calculateYearsFromDate(dateString: string): number {
+export function calculateYearsFromDate(dateString: string): string {
     const startDate = new Date(dateString)
     const currentDate = new Date()
 
@@ -6,5 +6,5 @@ export function calculateYearsFromDate(dateString: string): number {
 
     const yearsDiff = timeDiff / (1000 * 60 * 60 * 24 * 365.25)
 
-    return parseFloat(yearsDiff.toFixed(1))
+    return String(parseFloat(yearsDiff.toFixed(1))).replace('.', ',')
 }

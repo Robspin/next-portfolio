@@ -34,7 +34,8 @@ export default function Bio() {
                         <li>Teaching react and react-native to interns and external developers</li>
                     </ul>
                     <br/>
-                    Wish to see some of my past projects? Please head over to my work.<br/>
+                    I am currently open to working other projects.<br /> Interested? Feel free to send me an email throught my contact form.<br /><br />
+                    Wish to see some of my past projects first?<br /> Please head over to my work.<br/>
             </TextContainer>
         </div>
     )
