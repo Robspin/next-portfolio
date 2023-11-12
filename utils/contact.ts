@@ -14,7 +14,7 @@ const transporter = nodemailer.createTransport({
 export const sendEmail = async (from: string, text: string) => {
     const email = {
         from: 'next_solution1@hotmail.com',
-        to: ['next_solution1@hotmail.com', 'robin_steeman@hotmail.com', 'robin_steeman@protonmail.com'],
+        to: [process.env.EMAIL_RECIPIENT_1 ?? '', process.env.EMAIL_RECIPIENT_2 ?? ''],
         subject: `Contact request from ${from}`,
         text: `${text}
         
