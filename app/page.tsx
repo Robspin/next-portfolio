@@ -39,7 +39,7 @@ export default function Home() {
 
 
   return (
-    <main className="h-screen w-screen overflow-hidden">
+    <div className="h-screen w-screen overflow-hidden">
         <SpaceBackground />
         <div className={`duration-600 transition ${navigationClass}`}>
             <Landing navigateTo={navigateTo} />
@@ -48,6 +48,6 @@ export default function Home() {
             <Contact navigateTo={navigateTo} />
         </div>
         <Loading />
-    </main>
+    </div>
   )
 }

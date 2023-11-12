@@ -1,5 +1,6 @@
 import './globals.css'
 import { Raleway } from 'next/font/google'
+import { Toaster } from '@/components/ui/toaster'
 
 const raleway = Raleway({ subsets: ['latin'] })
 
@@ -15,7 +16,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`bg-black`}>{children}</body>
+      <body className={`bg-black dark`}>
+        <main>
+          {children}
+        </main>
+        <Toaster />
+      </body>
     </html>
   )
 }

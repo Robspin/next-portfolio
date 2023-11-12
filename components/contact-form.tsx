@@ -1,5 +1,3 @@
-
-
 "use client"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
@@ -16,6 +14,7 @@ import {
 import { Textarea } from "@/components/ui/textarea"
 import { toast } from "@/components/ui/use-toast"
 import { Input } from "@/components/ui/input"
+import { sendEmail } from '@/utils/contact'
 
 const CheckIcon = ({ ...props }) => (
     <svg { ...props } xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -31,7 +30,7 @@ const FormSchema = z.object({
             message: "Message must be at least 10 characters.",
         })
         .max(500, {
-            message: "Message must not be longer than 500 characters.",
+            message: "Message must be shorter than 500 characters.",
         }),
     email: z
         .string()
@@ -47,24 +46,24 @@ export default function ContactForm() {
     })
 
     async function onSubmit(data: z.infer<typeof FormSchema>) {
-        const body = JSON.stringify({ from: data.email, text: data.message })
-
-        form.reset({ message: '', email: '' })
-
-        const res = await fetch('/api/contact-email', { headers: { 'Content-type': 'application/json' }, method: 'POST', body })
-
-        console.log('done: ', res)
-
-        if (!res) {
+        try {
+            const res = await sendEmail(data.email, data.message)
+            form.reset({ message: '', email: '' })
+            if (res.accepted.length > 0) {
+                toast({
+                    description: (
+                        <div className="text-green-600 flex justify-center items-center"><CheckIcon className="w-6 h-6 mr-2" />Thank you, you will hear from me soon!</div>
+                    )
+                })
+            }
+        } catch (e) {
             console.log('Something went wrong sending email')
-            return
+            toast({
+                description: (
+                    <div className="text-red-600 flex justify-center items-center">Something went wrong while trying to send email</div>
+                )
+            })
         }
-
-        toast({
-            description: (
-                <div className="text-green-600 flex justify-center items-center"><CheckIcon className="w-6 h-6 mr-2" />Thank you, you will hear from us soon!</div>
-            )
-        })
     }
 
     return (
