@@ -12,7 +12,7 @@ import {
     FormMessage,
 } from "@/components/ui/form"
 import { Textarea } from "@/components/ui/textarea"
-import { toast } from "@/components/ui/use-toast"
+import { useToast } from "@/components/ui/use-toast"
 import { Input } from "@/components/ui/input"
 import { sendEmail } from '@/utils/contact'
 
@@ -44,6 +44,8 @@ export default function ContactForm() {
     const form = useForm<z.infer<typeof FormSchema>>({
         resolver: zodResolver(FormSchema),
     })
+    const { toast } = useToast()
+
 
     async function onSubmit(data: z.infer<typeof FormSchema>) {
         try {
