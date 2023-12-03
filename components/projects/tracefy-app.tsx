@@ -1,9 +1,8 @@
 import Image from 'next/image'
-import Github from '@/components/svgs/github'
-import Eye from '@/components/svgs/eye'
 import ExternalALink from '@/components/external-a-link'
 import { motion } from 'framer-motion'
 import MobileIcon from '@/components/svgs/mobile'
+import { ImageDialog } from '@/components/image-dialog'
 
 export default function TracefyApp() {
     return (
@@ -22,13 +21,15 @@ export default function TracefyApp() {
                         <h3 className="tracking-tight mt-1 text-xl font-bold text-red-600">Project lead - Frontend Developer - Designer</h3>
                     </div>
                     <div className="mt-4">
-                        <div className="xl:flex">
+                        <div className="grid xl:grid-cols-2">
                             <div className="mb-4 xl:mr-16">
+                                <h4 className="text-lg font-bold mb-2">Introduction</h4>
                                 <div className="mb-8">
-                                    One of my biggest projects while working at Tracefy was the creation of the new consumer apps.
-                                    Our existing app was created by an external app development agency.<br/>
+                                    One of my biggest projects while working at Tracefy was the creation of the new consumer app('s).<br/>
+                                    Our existing app was created by an external app development agency.
                                     And because of our growth and desire flexibility and control the decision was made to create the new Tracefy app inhouse.<br/>
                                 </div>
+                                <h4 className="text-lg font-bold mb-2">Design</h4>
                                 <div className="mb-8">
                                     Even though my ux/ui experience was lacking at the time. I was given the task of the design process.
                                     This was a lengthy process of doing customer research and collecting data.
@@ -44,10 +45,16 @@ export default function TracefyApp() {
                                     <li>Have a working good looking website fast</li>
                                 </ul>
                             </div>
-                            <div className="md:max-w-[400px] flex flex-col border border-green-600 mb-8">
-                                <Image className="ml-auto" src="/assets/projects/tracefy-app/app-screen.jpeg" alt="Tracefy App" height={400} width={400} />
-                                <div className="flex justify-center py-2 gap-4 border-t border-t-green-600 flex-wrap">
-                                    {['expo', 'react-native', 'figma', 'typescript', 'reanimated', 'lottie'].map((tech, i) => <div key={i} className="px-2 py-1 text-xs bg-red-400 rounded-3xl font-medium tracking-wider">{tech}</div>)}
+                            <div>
+                                <div className="flex justify-end">
+                                    <div className="border border-green-600 mb-8 w-full">
+                                        <ImageDialog src="/assets/projects/tracefy-app/figma-1.png" alt="Tracefy App" >
+                                            <Image src="/assets/projects/tracefy-app/figma-1.png" alt="Tracefy App" height={400} width={1200} />
+                                        </ImageDialog>
+                                        <div className="flex justify-center py-2 gap-4 border-t border-t-green-600 flex-wrap">
+                                            {['expo', 'react-native', 'figma', 'typescript', 'reanimated', 'lottie'].map((tech, i) => <div key={i} className="px-2 py-1 text-xs bg-red-400 rounded-3xl font-medium tracking-wider">{tech}</div>)}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
