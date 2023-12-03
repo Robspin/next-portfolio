@@ -8,21 +8,27 @@ import DefaultProject from '@/components/projects/default'
 import Solution1 from '@/components/projects/solution-1'
 import WebsiteIcon from '@/components/svgs/website'
 import { AnimatePresence } from 'framer-motion'
+import TracefyApp from '@/components/projects/tracefy-app'
+import MobileIcon from '@/components/svgs/mobile'
 
-type ProjectSlug = 'default' | 'solution1'
+type ProjectSlug = 'default' | 'solution1' | 'tracefy-app'
+
+type ProjectType = 'website' | 'mobile'
 
 type ProjectProps = {
     name: string
     slug: ProjectSlug
+    type?: ProjectType
 }
 
 interface ProjectComponentProps extends ProjectProps {
     activeProject: ProjectSlug
     onClick: () => void
     videoDisabled: boolean
+    type?: ProjectType
 }
 
-const MinifiedProject = ({ name, slug, onClick, activeProject, videoDisabled }: ProjectComponentProps) => {
+const MinifiedProject = ({ name, slug, onClick, type = 'website', activeProject, videoDisabled }: ProjectComponentProps) => {
     const isActiveProject = slug === activeProject
     let isLargeScreen = true
 
@@ -49,7 +55,8 @@ const MinifiedProject = ({ name, slug, onClick, activeProject, videoDisabled }: 
                         <Image src={`/assets/projects/${slug}/card.jpeg`} alt={name} height={200} width={200}/>
                     </div>
                     <div className="flex items-center justify-center">
-                        <WebsiteIcon className="h-4 w-4 mr-2 mt-1" />
+                        {type === 'website' && <WebsiteIcon className="h-4 w-4 mr-2 mt-1" />}
+                        {type === 'mobile' && <MobileIcon className="h-4 w-4 mr-2 mt-1" />}
                         <p className="text-xl text-center mt-1 text-gray-800">{name}</p>
                     </div>
                 </div>
@@ -58,7 +65,7 @@ const MinifiedProject = ({ name, slug, onClick, activeProject, videoDisabled }: 
     )
 }
 
-const projects: ProjectProps[] = [{ name: 'Solution 1', slug: 'solution1' }, { name: 'Project', slug: 'default' }, { name: 'Project', slug: 'default' }, { name: 'Project', slug: 'default' }, { name: 'Project', slug: 'default' }, { name: 'Project', slug: 'default' }]
+const projects: ProjectProps[] = [{ name: 'Tracefy App', slug: 'tracefy-app', type: 'mobile' }, { name: 'Solution 1', slug: 'solution1' }, { name: 'Project', slug: 'default' }, { name: 'Project', slug: 'default' }, { name: 'Project', slug: 'default' }, { name: 'Project', slug: 'default' }]
 
 const MyWork = () => {
     const [activeProject, setActiveProject] = useState<ProjectSlug>('default')
@@ -67,6 +74,8 @@ const MyWork = () => {
         switch (activeProject) {
             case 'solution1':
                 return <Solution1 key="solution1" />
+            case 'tracefy-app':
+                return <TracefyApp key="tracefyApp" />
             default:
                 return <DefaultProject key="defaultProject" />
         }
@@ -76,8 +85,8 @@ const MyWork = () => {
         <PageContainer className="translate-x-[-100vw]">
             <div className="max-lg:flex-col max-lg:flex overflow-scroll flex h-screen">
                 <div className="w-screen lg:w-[300px] max-lg:py-6 max-lg:px-6 lg:py-24 lg:h-full shrink-0 flex lg:flex-col gap-10 overflow-auto items-center">
-                    {projects.map(({ name, slug}, index) =>
-                        <MinifiedProject name={name} slug={slug} activeProject={activeProject} key={index} onClick={() => setActiveProject(slug)} videoDisabled />)}
+                    {projects.map(({ name, slug, type }, index) =>
+                        <MinifiedProject name={name} slug={slug} type={type} activeProject={activeProject} key={index} onClick={() => setActiveProject(slug)} videoDisabled />)}
                 </div>
                 <div className="flex flex-col">
                     <AnimatePresence>

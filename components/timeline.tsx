@@ -59,8 +59,14 @@ const timelineData: TimelineItemProps[] = [
     },
     {
         title: "Front-end developer Tracefy",
-        timeframe: 'June 2021 - Now',
+        timeframe: 'June 2021 - December 2023',
         description: 'After building a decent portfolio containing past freelance projects. I got hired by Tracefy. Where I\'m still working today.',
+        iconName: 'code'
+    },
+    {
+        title: "Front-end developer as a Freelancer",
+        timeframe: 'January 2024 - Now',
+        description: 'I am currently working as a freelancer, interested in working together? Feel free to reach out.',
         iconName: 'code'
     },
 ]
