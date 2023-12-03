@@ -11,22 +11,26 @@ type Props = {
 export default function Navigation ({ currentView, navigateTo }: Props) {
 
     return (
-        <div className="absolute flex max-sm:flex-col sm:gap-12 bottom-8 sm:justify-center w-screen">
+        <div className={`absolute flex sm:gap-12 sm:bottom-8 ${currentView !== 'landing' ? 'justify-center bottom-8' : 'sm:justify-center max-sm:flex-col max-sm:bottom-20'} w-screen`}>
             <AnimatePresence>
                 {currentView === 'landing' ?
                     <>
                         <NavigationButton onClick={() => navigateTo('myWork')} title="my work"
-                          className="group"
+                          className="group sm:px-4 max-sm:py-1 sm:py-2"
                           iconLeft={<MoveLeft className="max-md:hidden w-6 text-white translate-x-0 mr-2 group-hover:-translate-x-1 transition" />} />
-                        <NavigationButton onClick={() => navigateTo('aboutMe')} title="about me" />
+                        <NavigationButton onClick={() => navigateTo('aboutMe')} title="about me" className="sm:px-4 max-sm:py-1 sm:py-2" />
                         <NavigationButton onClick={() => navigateTo('contact')} title="contact"
-                          className="group"
+                          className="group sm:px-4 max-sm:py-1 sm:py-2"
                           iconRight={<MoveRight className="max-md:hidden w-6 text-white translate-x-0 ml-2 group-hover:translate-x-1 transition" />} />
                     </>
-                    : <NavigationButton onClick={() => navigateTo('landing')} title="landing" className="group"
-                        iconLeft={currentView === 'contact' ? <MoveLeft className="w-6 text-white translate-x-0 mr-2 group-hover:-translate-x-1 transition" /> : null}
-                        iconRight={currentView === 'myWork' ? <MoveRight className="w-6 text-white translate-x-0 ml-2 group-hover:translate-x-1 transition" /> : null}
-                    />}
+                    :
+                        <div>
+                            <NavigationButton onClick={() => navigateTo('landing')} title="landing" className="group px-4 max-sm:py-1 sm:py-2"
+                                iconLeft={currentView === 'contact' ? <MoveLeft className="w-6 text-white translate-x-0 mr-2 group-hover:-translate-x-1 transition" /> : null}
+                                iconRight={currentView === 'myWork' ? <MoveRight className="w-6 text-white translate-x-0 ml-2 group-hover:translate-x-1 transition" /> : null}
+                            />
+                        </div>
+                    }
             </AnimatePresence>
         </div>
     )
