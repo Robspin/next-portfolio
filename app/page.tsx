@@ -2,12 +2,13 @@
 import MovingStars from "@/components/canvas/stars"
 import Scene from "@/components/canvas/scene"
 import { useState } from "react"
-import { NavigationClassTypes, PageTypes } from "@/utils/types"
+import { NavigationClassTypes, Views } from "@/utils/types"
 import Landing from '@/components/sections/landing'
 import AboutMe from '@/components/sections/about-me'
 import MyWork from '@/components/sections/my-work'
 import Contact from '@/components/sections/contact'
 import Loading from '@/components/loading'
+import Navigation from '@/components/navigation'
 
 const SpaceBackground = () => (
     <div className="h-full w-full absolute bg-black">
@@ -17,36 +18,29 @@ const SpaceBackground = () => (
     </div>
 )
 
-export default function Home() {
-    const [navigationClass, setNavigationClass] = useState<NavigationClassTypes>('move-up')
+const viewPositionClass: { [key in Views]: NavigationClassTypes } = {
+    landing: 'move-up',
+    aboutMe: 'move-down',
+    contact: 'move-left',
+    myWork: 'move-right'
+}
 
-    const navigateTo = (page: PageTypes) => {
-        switch (page) {
-            case "landing":
-                setNavigationClass('move-up')
-                break
-            case "aboutMe":
-                setNavigationClass('move-down')
-                break
-            case "contact":
-                setNavigationClass('move-left')
-                break
-            case "myWork":
-                setNavigationClass('move-right')
-                break
-        }
-    }
+export default function Home() {
+    const [view, setView] = useState<Views>('landing')
+
+    const navigateTo = (view: Views) => setView(view)
 
 
   return (
     <div className="h-screen w-screen overflow-hidden">
         <SpaceBackground />
-        <div className={`duration-600 transition ${navigationClass}`}>
-            <Landing navigateTo={navigateTo} />
-            <AboutMe navigateTo={navigateTo} />
-            <MyWork navigateTo={navigateTo} />
-            <Contact navigateTo={navigateTo} />
+        <div className={`duration-600 transition ${viewPositionClass[view]}`}>
+            <Landing />
+            <AboutMe />
+            <MyWork />
+            <Contact />
         </div>
+        <Navigation currentView={view} navigateTo={navigateTo} />
         <Loading />
     </div>
   )

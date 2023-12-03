@@ -8,3 +8,8 @@ Optional
 - Automatic bio chat appear using npm package
 - Fix landing text bug
 - Finish theme and make a bit bold
+
+Projects
+- Tracefy app
+- Tracefy backoffice
+- Deno live updates service

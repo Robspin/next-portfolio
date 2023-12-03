@@ -1,6 +1,4 @@
-import NavigationButton from "@/components/navigation-button"
 import PageContainer from "@/components/page-container"
-import { PageProps } from "@/utils/types"
 import { Canvas } from '@react-three/fiber'
 import { useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
@@ -55,10 +53,9 @@ const Astronaut = ({ ...props }) => {
     return <primitive ref={group} object={scene} {...props} />
 }
 
-const Contact = ({ navigateTo }: PageProps) => {
+const Contact = () => {
     return (
         <PageContainer className="translate-x-[100vw]">
-            <NavigationButton onClick={() => navigateTo('aboutMe')} text="contact" className="button-vertical-left" vertical />
             <div className="lg:p-24 w-full h-full flex justify-center items-center flex-col">
                 <div className="h-52 w-full pointer-events-none -mt-8 max-md:w-full max-md:px-16">
                     <Canvas>

@@ -1,17 +1,27 @@
+import { ReactNode } from 'react'
+import { motion } from 'framer-motion'
+
 type Props = {
     onClick: () => void
-    className: string
-    text: string
-    vertical?: boolean
+    className?: string
+    title: string
+    iconLeft?: ReactNode
+    iconRight?: ReactNode
 }
 
-
-const NavigationButton = ({ onClick, text, className, vertical, ...props }: Props) => {
+const NewNavigationButton = ({ onClick, title, className, iconRight, iconLeft }: Props) => {
     return (
-        <div onClick={onClick} {...props} className={`absolute m-0 select-none uppercase border border-white text-white cursor-pointer bg-black ${vertical ? 'button-vertical px-[6px] py-2 md:px-2 md:py-3' : 'px-2 py-[6px] md:px-4 md:py-2'} font-bold tracking-[5px] ${className}`}>
-            {text}
-        </div>
+        <motion.button
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { duration: 0.7, delay: 0.7 } }}
+            exit={{ opacity: 0, transition: { duration: 0.5 } }}
+            key={title}
+            onClick={onClick} className={`select-none uppercase text-white bg-black flex md:px-4 max-sm:py-1 sm:py-2 rounded tracking-widest ${className}`}>
+            {iconLeft}
+            {title}
+            {iconRight}
+        </ motion.button>
     )
 }
 
-export default NavigationButton
+export default NewNavigationButton

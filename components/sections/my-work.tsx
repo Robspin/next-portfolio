@@ -1,8 +1,6 @@
 'use client'
 import { useState } from 'react'
-import NavigationButton from "@/components/navigation-button"
 import PageContainer from "@/components/page-container"
-import { PageProps } from "@/utils/types"
 import Tilt from 'react-parallax-tilt'
 import EndlessText from '@/components/endless-text'
 import Image from 'next/image'
@@ -62,7 +60,7 @@ const MinifiedProject = ({ name, slug, onClick, activeProject, videoDisabled }: 
 
 const projects: ProjectProps[] = [{ name: 'Solution 1', slug: 'solution1' }, { name: 'Project', slug: 'default' }, { name: 'Project', slug: 'default' }, { name: 'Project', slug: 'default' }, { name: 'Project', slug: 'default' }, { name: 'Project', slug: 'default' }]
 
-const MyWork = ({ navigateTo }: PageProps) => {
+const MyWork = () => {
     const [activeProject, setActiveProject] = useState<ProjectSlug>('default')
 
     const renderProject = () => {
@@ -76,7 +74,6 @@ const MyWork = ({ navigateTo }: PageProps) => {
 
     return (
         <PageContainer className="translate-x-[-100vw]">
-            <NavigationButton onClick={() => navigateTo('aboutMe')} text="about me" className="button-vertical-right z-50" vertical />
             <div className="max-lg:flex-col max-lg:flex overflow-scroll flex h-screen">
                 <div className="w-screen lg:w-[300px] max-lg:py-6 max-lg:pl-6 max-lg:pr-16 lg:py-24 lg:h-full shrink-0 flex lg:flex-col gap-10 overflow-auto items-center">
                     {projects.map(({ name, slug}, index) =>

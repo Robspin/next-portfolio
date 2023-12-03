@@ -76,13 +76,13 @@
     }
 
     .move-up {
-        -webkit-transform: translateY(100vh);
-        transform: translateY(100vh);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
     }
 
     .move-down {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
+        -webkit-transform: translateY(-100vh);
+        transform: translateY(-100vh);
     }
 
     .parallax-effect {
