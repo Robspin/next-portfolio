@@ -25,9 +25,14 @@ export default function TracefyApp() {
                         <div className="xl:flex">
                             <div className="mb-4 xl:mr-16">
                                 <div className="mb-8">
-                                    This project came to life when I started playing with the idea of freelancing again.<br/>
-                                    Without any real plans at the time, I wanted to test my skills and see how fast I could create a brand and website.<br/>
-                                    It was also a great opportunity to play with framer-motion as an animation library<br/>
+                                    One of my biggest projects while working at Tracefy was the creation of the new consumer apps.
+                                    Our existing app was created by an external app development agency.<br/>
+                                    And because of our growth and desire flexibility and control the decision was made to create the new Tracefy app inhouse.<br/>
+                                </div>
+                                <div className="mb-8">
+                                    Even though my ux/ui experience was lacking at the time. I was given the task of the design process.
+                                    This was a lengthy process of doing customer research and collecting data.
+                                    Multiple design iterations and eventually starting over from scratch.
                                 </div>
                                 <div>
                                     The requirements were:

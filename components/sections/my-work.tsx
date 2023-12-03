@@ -68,7 +68,7 @@ const MinifiedProject = ({ name, slug, onClick, type = 'website', activeProject,
 const projects: ProjectProps[] = [{ name: 'Tracefy App', slug: 'tracefy-app', type: 'mobile' }, { name: 'Solution 1', slug: 'solution1' }, { name: 'Project', slug: 'default' }, { name: 'Project', slug: 'default' }, { name: 'Project', slug: 'default' }, { name: 'Project', slug: 'default' }]
 
 const MyWork = () => {
-    const [activeProject, setActiveProject] = useState<ProjectSlug>('default')
+    const [activeProject, setActiveProject] = useState<ProjectSlug>('tracefy-app')
 
     const renderProject = () => {
         switch (activeProject) {
