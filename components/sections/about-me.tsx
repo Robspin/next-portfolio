@@ -1,11 +1,16 @@
 import PageContainer from "@/components/page-container"
 import BioTimelineSwitcher from '@/components/bio-timeline-switcher'
+import { View } from '@/utils/types'
 
-const AboutMe = () => {
+type Props = {
+    currentView: View
+}
+
+const AboutMe = ({ currentView }: Props) => {
     return (
         <PageContainer className="translate-y-[100vh]">
             <div className="h-screen w-screen flex justify-center overflow-y-scroll">
-                <BioTimelineSwitcher />
+                <BioTimelineSwitcher currentView={currentView} />
             </div>
         </PageContainer>
     )

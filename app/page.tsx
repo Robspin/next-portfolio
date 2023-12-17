@@ -2,7 +2,7 @@
 import MovingStars from "@/components/canvas/stars"
 import Scene from "@/components/canvas/scene"
 import { useState } from "react"
-import { NavigationClassTypes, Views } from "@/utils/types"
+import { NavigationClassTypes, View } from "@/utils/types"
 import Landing from '@/components/sections/landing'
 import AboutMe from '@/components/sections/about-me'
 import MyWork from '@/components/sections/my-work'
@@ -18,7 +18,7 @@ const SpaceBackground = () => (
     </div>
 )
 
-const viewPositionClass: { [key in Views]: NavigationClassTypes } = {
+const viewPositionClass: { [key in View]: NavigationClassTypes } = {
     landing: 'move-up',
     aboutMe: 'move-down',
     contact: 'move-left',
@@ -26,9 +26,9 @@ const viewPositionClass: { [key in Views]: NavigationClassTypes } = {
 }
 
 export default function Home() {
-    const [view, setView] = useState<Views>('landing')
+    const [view, setView] = useState<View>('landing')
 
-    const navigateTo = (view: Views) => setView(view)
+    const navigateTo = (view: View) => setView(view)
 
 
   return (
@@ -36,7 +36,7 @@ export default function Home() {
         <SpaceBackground />
         <div className={`duration-600 transition ${viewPositionClass[view]}`}>
             <Landing />
-            <AboutMe />
+            <AboutMe currentView={view} />
             <MyWork />
             <Contact />
         </div>

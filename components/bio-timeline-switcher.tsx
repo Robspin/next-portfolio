@@ -1,14 +1,25 @@
 'use client'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Bio from '@/components/bio'
 import Timeline from '@/components/timeline'
 import Image from 'next/image'
+import { View } from '@/utils/types'
 
-export default function BioTimelineSwitcher() {
+type Props = {
+    currentView: View
+}
+
+export default function BioTimelineSwitcher({ currentView }: Props) {
     const [showTimeline, setShowTimeline] = useState(false)
+    const [bioAnimationFinished, setBioAnimationFinished] = useState(false)
+
+    useEffect(() => {
+        console.log(bioAnimationFinished)
+
+    }, [bioAnimationFinished])
 
     return (
-        <div className="max-w-[1024px] max-md:py-20 max-md:px-[60px] md:p-24">
+        <div className="max-w-[1024px] lg:w-[1024px] max-md:py-20 max-md:px-[60px] md:p-24">
             <div className="mt-8 mb-4 flex max-md:justify-center md:justify-end">
                 <button onClick={() => setShowTimeline(!showTimeline)} className="text-white border-b border-b-transparent hover:border-b-white select-none">view {showTimeline ? 'bio' : 'timeline'}</button>
             </div>
@@ -18,7 +29,7 @@ export default function BioTimelineSwitcher() {
                         <Image src="/assets/images/randomguy.jpeg" alt="randomguy" height={220} width={220} />
                     </div>
                 </div>
-            {showTimeline ? <Timeline /> : <Bio />}
+            {showTimeline ? <Timeline /> : <Bio currentView={currentView} bioAnimationFinished={bioAnimationFinished} setBioAnimationFinished={setBioAnimationFinished} />}
             </div>
         </div>
     )
