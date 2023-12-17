@@ -13,15 +13,13 @@ export default function BioTimelineSwitcher({ currentView }: Props) {
     const [showTimeline, setShowTimeline] = useState(false)
     const [bioAnimationFinished, setBioAnimationFinished] = useState(false)
 
-    useEffect(() => {
-        console.log(bioAnimationFinished)
-
-    }, [bioAnimationFinished])
-
     return (
         <div className="max-w-[1024px] lg:w-[1024px] max-md:py-20 max-md:px-[60px] md:p-24">
             <div className="mt-8 mb-4 flex max-md:justify-center md:justify-end">
-                <button onClick={() => setShowTimeline(!showTimeline)} className="text-white border-b border-b-transparent hover:border-b-white select-none">view {showTimeline ? 'bio' : 'timeline'}</button>
+                <button onClick={() => {
+                    setShowTimeline(!showTimeline)
+                    setBioAnimationFinished(true)
+                }} className="text-white border-b border-b-transparent hover:border-b-white select-none">view {showTimeline ? 'bio' : 'timeline'}</button>
             </div>
             <div className="flex max-md:flex-col pb-24 min-w-[220px]">
                 <div className="max-md:self-center h-40 w-40 max-md:mb-8">

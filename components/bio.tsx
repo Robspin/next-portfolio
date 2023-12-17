@@ -20,16 +20,12 @@ type Props = {
 
 export default function Bio({ currentView, setBioAnimationFinished, bioAnimationFinished }: Props) {
     const [step, setStep] = useState(0)
-    const [startAnimation, setStartAnimation] = useState(false)
 
     useEffect(() => {
-        if (currentView === 'aboutMe' && !startAnimation) {
-            setTimeout(() => {
-                setStep(1)
-                setStartAnimation(true)
-            }, 1000)
+        if (currentView === 'aboutMe' && !bioAnimationFinished) setTimeout(() => setStep(1), 1000)
+        return () => {
+            if (step === 2) setBioAnimationFinished(true)
         }
-        return () => step === 2 && setBioAnimationFinished(true)
     }, [currentView])
 
     if (!bioAnimationFinished) return (
