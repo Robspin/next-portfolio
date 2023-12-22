@@ -17,9 +17,9 @@ export function ImageDialog({ src, alt, children }: Props) {
     return (
         <Dialog>
             <DialogTrigger asChild>
-                <button>
+                <div className="cursor-pointer">
                     {children}
-                </button>
+                </div>
             </DialogTrigger>
             <DialogContent>
                 <div className="h-[90vh] relative">

@@ -1,4 +1,6 @@
 import './globals.css'
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 import { Raleway } from 'next/font/google'
 import { Toaster } from '@/components/ui/toaster'
 
@@ -16,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`bg-black dark`}>
+      <body className={`bg-black dark ${raleway.className}`}>
         <main>
           {children}
         </main>
