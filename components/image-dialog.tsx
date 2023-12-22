@@ -22,7 +22,7 @@ export function ImageDialog({ src, alt, children }: Props) {
             </DialogTrigger>
             <DialogContent>
                 <div className="h-[90vh] relative">
-                    <Image src={src} alt={alt} className="object-contain" layout="fill" />
+                    <Image src={src} alt={alt} className="object-contain" fill />
                 </div>
             </DialogContent>
         </Dialog>

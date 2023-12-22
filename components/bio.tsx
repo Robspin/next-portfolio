@@ -18,7 +18,7 @@ type Props = {
     setBioAnimationFinished: Dispatch<boolean>
 }
 
-export default function Bio({ currentView, setBioAnimationFinished, bioAnimationFinished }: Props) {
+const Bio = ({ currentView, setBioAnimationFinished, bioAnimationFinished }: Props) => {
     const [step, setStep] = useState(0)
 
     useEffect(() => {
@@ -96,9 +96,11 @@ export default function Bio({ currentView, setBioAnimationFinished, bioAnimation
                     - Leading the development of the new mobile app along with two external developers<br/>
                     - Teaching react and react-native to interns and external developers<br/>
                 <br/>
-                I am currently open to working other projects.<br /> Interested? Feel free to send me an email throught my contact form.<br /><br />
-                Wish to see some of my past projects first?<br /> Please head over to my work.<br/>
+                I am currently open to working other projects.<br /> Interested? Feel free to send me an email through my contact form.<br /><br />
+                Interested in seeing some of my past projects?<br /> Please head over to my work.<br/>
             </TextContainer>
         </div>
     )
 }
+
+export default Bio
