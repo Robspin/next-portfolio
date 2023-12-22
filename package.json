@@ -46,6 +46,7 @@
   },
   "devDependencies": {
     "@types/nodemailer": "^6.4.14",
+    "@types/react-slick": "^0.23.13",
     "@types/three": "^0.152.1"
   }
 }

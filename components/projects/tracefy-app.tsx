@@ -3,6 +3,8 @@ import ExternalALink from '@/components/external-a-link'
 import { motion } from 'framer-motion'
 import MobileIcon from '@/components/svgs/mobile'
 import { ImageDialog } from '@/components/image-dialog'
+import Slider from "react-slick"
+import ImageCarousel from '@/components/image-carousel'
 
 export default function TracefyApp() {
     return (
@@ -95,6 +97,9 @@ export default function TracefyApp() {
                             The Expo workflow allows for a really fast cross platform mobile development pace.
                             I have become quite the Expo fan in the process. And any future projects will also be in
                             Expo when given the choice.
+                        </div>
+                        <div className="mb-8">
+                            <ImageCarousel imageUrls={['/assets/projects/tracefy-app/figma-1.png', '/assets/projects/tracefy-app/figma-1.png', '/assets/projects/tracefy-app/figma-1.png']} />
                         </div>
                         <h4 className="text-lg font-bold mb-2">Links and information</h4>
                         <ul className="pl-4 list-disc mb-8">

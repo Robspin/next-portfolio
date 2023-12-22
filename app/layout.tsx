@@ -8,14 +8,10 @@ const raleway = Raleway({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Robin Steeman | Portfolio',
-  description: 'Frontend Developer',
+  description: 'Frontend Developer'
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className={`bg-black dark ${raleway.className}`}>
