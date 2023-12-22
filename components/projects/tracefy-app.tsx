@@ -3,7 +3,6 @@ import ExternalALink from '@/components/external-a-link'
 import { motion } from 'framer-motion'
 import MobileIcon from '@/components/svgs/mobile'
 import { ImageDialog } from '@/components/image-dialog'
-import Slider from "react-slick"
 import ImageCarousel from '@/components/image-carousel'
 
 export default function TracefyApp() {
