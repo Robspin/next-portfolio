@@ -4,6 +4,24 @@
 
 .slick-prev:before, .slick-next:before {
     color: black !important;
+    font-size: 28px !important;
+}
+
+.slider-styles-white .slick-prev:before, .slider-styles-white .slick-next:before {
+    color: white !important;
+}
+
+.slick-dots button::before {
+    font-size: 12px !important;
+}
+
+.custom-dots li {
+    margin: 0 8px 2.25rem 8px !important;
+}
+
+.custom-dots button::before {
+    font-size: 12px !important;
+    color: white !important;
 }
 
 @layer base {
