@@ -11,7 +11,7 @@ import { Card, CardContent } from '@/components/ui/card'
 
 type Props = { imageUrls: string[] }
 
-export default function ImageCarousel({ imageUrls }: Props) {
+export default function ImageCarousel({ imageUrls  }: Props) {
     return (
         <div className="w-full lg:px-12 mb-24 mt-16 xl:h-[400px] relative">
             <div className="left-0 right-0 bottom-0 top-0 max-lg:mx-8">
