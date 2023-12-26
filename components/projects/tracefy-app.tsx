@@ -58,8 +58,7 @@ export default function TracefyApp() {
                                             <Image src="/assets/projects/tracefy-app/figma-1.png" alt="Tracefy App"
                                                    height={400} width={1200}/>
                                         </ImageDialog>
-                                        <div
-                                            className="flex justify-center py-2 gap-4 border-t border-t-green-600 flex-wrap">
+                                        <div className="flex justify-center py-2 gap-4 border-t border-t-green-600 flex-wrap">
                                             {['expo', 'react-native', 'figma', 'typescript', 'reanimated', 'lottie'].map((tech, i) =>
                                                 <div key={i}
                                                      className="px-2 py-1 text-xs bg-red-400 rounded-3xl font-medium tracking-wider">{tech}</div>)}
@@ -98,7 +97,7 @@ export default function TracefyApp() {
                             I have become quite the Expo fan in the process. And any future projects will also be in
                             Expo when given the choice.
                         </Paragraph>
-                        <ImageCarousel imageUrls={['/assets/projects/tracefy-app/figma-1.png', '/assets/projects/tracefy-app/figma-1.png', '/assets/projects/tracefy-app/figma-1.png']} />
+                        <ImageCarousel imageUrls={['/assets/projects/tracefy-app/figma-1.png', '/assets/projects/tracefy-app/figma-1.png', '/assets/projects/tracefy-app/figma-1.png', '/assets/projects/tracefy-app/figma-1.png']} />
                         <H4>Links and information</H4>
                         <ul className="pl-4 list-disc mb-8">
                             <ExternalALink href="https://docs.expo.dev/">
