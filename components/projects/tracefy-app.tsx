@@ -1,18 +1,14 @@
 import Image from 'next/image'
 import ExternalALink from '@/components/external-a-link'
-import { motion } from 'framer-motion'
 import MobileIcon from '@/components/svgs/mobile'
 import { ImageDialog } from '@/components/image-dialog'
 import ImageCarousel from '@/components/image-carousel'
 import { H2, H4, Paragraph } from '@/components/typography'
+import ProjectFramerAnimation from '@/components/projects/project-framer-animation'
 
 export default function TracefyApp() {
     return (
-        <motion.div
-            initial={{ opacity: 0, y: 200 }}
-            animate={{ opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.5 } }}
-            exit={{ opacity: 0, y: 200, transition: { duration: 0.3 } }}
-        >
+        <ProjectFramerAnimation>
             <div className="max-w-[1048px] max-lg:mx-6 py-6 lg:py-24 lg:h-screen lg:overflow-auto">
                 <div className="bg-green-300 opacity-80 lg:mr-12 rounded p-8 border border-red-400">
                     <div className="flex justify-between items-center border-b border-b-green-600">
@@ -113,6 +109,6 @@ export default function TracefyApp() {
                     </div>
                 </div>
             </div>
-        </motion.div>
+        </ProjectFramerAnimation>
     )
 }

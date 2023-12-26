@@ -4,6 +4,7 @@ import Github from '@/components/svgs/github'
 import Eye from '@/components/svgs/eye'
 import ExternalALink from '@/components/external-a-link'
 import { motion } from 'framer-motion'
+import ProjectFramerAnimation from '@/components/projects/project-framer-animation'
 
 const Solution1LogoFull = ({ ...props }) => (
     <svg {...props} width="47" height="18" viewBox="0 0 47 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -20,11 +21,7 @@ const Solution1LogoShort = ({ ...props }) => (
 
 export default function Solution1() {
     return (
-        <motion.div
-            initial={{ opacity: 0, y: 200 }}
-            animate={{ opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.5 } }}
-            exit={{ opacity: 0, y: 200, transition: { duration: 0.3 } }}
-        >
+        <ProjectFramerAnimation>
             <div className="max-w-[1048px] max-lg:mx-6 py-6 lg:py-24 lg:h-screen lg:overflow-auto">
                 <div className="bg-green-300 opacity-80 lg:mr-12 rounded p-8 border border-red-400">
                     <div className="flex justify-between items-center border-b border-b-green-600">
@@ -107,6 +104,6 @@ export default function Solution1() {
                     </div>
                 </div>
             </div>
-        </motion.div>
+        </ProjectFramerAnimation>
     )
 }
