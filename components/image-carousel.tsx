@@ -8,6 +8,7 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel"
 import { Card, CardContent } from '@/components/ui/card'
+import { ImageDialog } from '@/components/image-dialog'
 
 type Props = { imageUrls: string[] }
 
@@ -20,9 +21,11 @@ export default function ImageCarousel({ imageUrls }: Props) {
                         {imageUrls.map((img, index) => (
                             <CarouselItem key={index}>
                                 <Card>
-                                    <CardContent className="h-[264px] md:h-[400px] relative">
-                                        <Image src={img} key={index} alt={`project image ${index}`} className="object-contain" fill />
-                                    </CardContent>
+                                    <ImageDialog src={img} alt={`Project image ${index}`} >
+                                        <CardContent className="h-[264px] md:h-[400px] relative">
+                                            <Image src={img} key={index} alt={`project image ${index}`} className="object-contain" fill />
+                                        </CardContent>
+                                    </ImageDialog>
                                 </Card>
                             </CarouselItem>
                             )
