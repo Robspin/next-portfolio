@@ -28,23 +28,21 @@ export default function TracefyApp() {
                                     Tracefy is a Netherlands based company which anti theft solutions mainly focussed on
                                     e-bikes.
                                     Their main product is a tracker which which is sold through local bicycle shops.
-                                    After purchase the customer can download and connect the Tracefy app.
+                                    After purchase the customer can download and connect the Tracefy app to their tracker.
                                 </Paragraph>
                                 <Paragraph>
                                     The app can be used for several things, for example viewing the current bike
-                                    location or viewing your past
-                                    trips.
+                                    location or viewing your past trips.
                                     But most importantly if the bicycle gets stolen. It can be used to activate
                                     Tracefy's recovery service.
-                                    This means members of an authorized team will go out and recover your bike for you!
+                                    This means a security team member will go out and recover your bike for you!
                                 </Paragraph>
                                 <H4>Wait there's two?</H4>
                                 <Paragraph>
-                                    Far into the development of the Tracefy app was working on the release of a new
-                                    product.
+                                    Far into the development of the Tracefy app a new hardware product was being developed.
                                     Namely a tracker called Tracefy Solo, a lighter version of Tracefy's main product
                                     (now called the Tracefy Pro).
-                                    This meant another lighter version app also needed to be built.
+                                    This meant another lighter version mobile app also needed to be built.
                                 </Paragraph>
                             </div>
                             <div>
@@ -72,7 +70,7 @@ export default function TracefyApp() {
                             over from scratch more than once.
                         </Paragraph>
                         <Paragraph>
-                            In the end I am happy with the resulting clean and modern style.
+                            Looking back I am very pleased with the clean and modern style.
                         </Paragraph>
                         <H4>Development</H4>
                         <Paragraph>
@@ -85,13 +83,12 @@ export default function TracefyApp() {
                             It was up to me to teach them the basics and best practices.
                         </Paragraph>
                         <Paragraph>
-                            We created a customisable google map with several map bounds to be changed by a button
-                            press.
+                            The main screen is a customizable google map which shows the users bike and mobile location along with nearby points of interests.
+                            There is also a map bounds button which shifts between the user location and the combined user location along with his Tracefy bicycles.
                             For transitions and simple animations we used the Reanimated library and for complex
                             animations we used Lottie.
-                            The Expo workflow allows for a really fast cross platform mobile development pace.
-                            I have become quite the Expo fan in the process. And any future projects will also be in
-                            Expo when given the choice.
+                            I have been pleased with the Expo workflow which allows for a really fast and pleasant cross platform mobile development experience.
+                            When given the choice I would choose Expo again in the future.
                         </Paragraph>
                         <ImageCarousel imageUrls={['/assets/projects/tracefy-app/figma-1.png', '/assets/projects/tracefy-app/figma-1.png', '/assets/projects/tracefy-app/figma-1.png', '/assets/projects/tracefy-app/figma-1.png']} />
                         <H4>Links and information</H4>

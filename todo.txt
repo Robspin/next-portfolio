@@ -11,5 +11,6 @@ Optional
 
 Projects
 - Tracefy app
+- Tracefy portal
 - Tracefy backoffice
 - Deno live updates service

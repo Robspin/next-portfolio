@@ -5,6 +5,8 @@ import Eye from '@/components/svgs/eye'
 import ExternalALink from '@/components/external-a-link'
 import { motion } from 'framer-motion'
 import ProjectFramerAnimation from '@/components/projects/project-framer-animation'
+import { H4, Paragraph } from '@/components/typography'
+import { ImageDialog } from '@/components/image-dialog'
 
 const Solution1LogoFull = ({ ...props }) => (
     <svg {...props} width="47" height="18" viewBox="0 0 47 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,34 +44,37 @@ export default function Solution1() {
                     <div className="mt-4">
                         <div className="xl:flex">
                             <div className="mb-4 xl:mr-16">
-                                <div className="mb-8">
-                                    This project came to life when I started playing with the idea of freelancing again.<br/>
-                                    Without any real plans at the time, I wanted to test my skills and see how fast I could create a brand and website.<br/>
-                                    It was also a great opportunity to play with framer-motion as an animation library<br/>
-                                </div>
-                                <div>
-                                    The requirements were:
-                                </div>
-                                <ul className="pl-4 list-disc mb-8">
-                                    <li>Clean and simple responsive design</li>
-                                    <li>Use transitions and small animations</li>
-                                    <li>Have a working contact form solution</li>
-                                    <li>Have a working good looking website fast</li>
-                                </ul>
+                                <H4>Introduction</H4>
+                                <Paragraph>
+                                    This project came to life when I started playing with the idea of freelancing again.
+                                    But mostly I wanted to test my skills and see if I could create a brand and website within a weekend.
+                                    It was also a great opportunity to play with framer-motion as an animation library.
+                                </Paragraph>
+                                <H4>Requirements</H4>
+                                <Paragraph>
+                                    <ul className="pl-4 list-disc mb-8">
+                                        <li>Clean and simple responsive design</li>
+                                        <li>Use transitions and small animations</li>
+                                        <li>Have a working contact form solution</li>
+                                        <li>Have it finished in a weekend</li>
+                                    </ul>
+                                </Paragraph>
                             </div>
                             <div className="md:max-w-[400px] flex flex-col border border-green-600 mb-8">
-                                <Image className="ml-auto" src="/assets/projects/solution1/card.jpeg" alt="solution1" height={300} width={1100} />
+                                <ImageDialog src="/assets/projects/solution1/card.jpeg" alt="Solution 1">
+                                    <Image className="ml-auto" src="/assets/projects/solution1/card.jpeg" alt="Solution 1" height={300} width={1100} />
+                                </ImageDialog>
                                 <div className="flex justify-center py-2 gap-4 border-t border-t-green-600 flex-wrap">
                                     {['react', 'tailwind', 'figma', 'typescript', 'framer-motion'].map((tech, i) => <div key={i} className="px-2 py-1 text-xs bg-red-400 rounded-3xl font-medium tracking-wider">{tech}</div>)}
                                 </div>
                             </div>
                         </div>
-                        <h4 className="text-lg font-bold mb-2">Design</h4>
-                        <div className="mb-8 md:mr-14">
+                        <H4>Design</H4>
+                        <Paragraph>
                             After a few sketches I had an idea for which direction I wanted to go.<br/>
                             For the color scheme I chose a light blue tint color that also worked in light mode.<br/>
                             It was fun creating the solution 1 logo icons.
-                        </div>
+                        </Paragraph>
                         <div className="py-4 flex max-sm:flex-col gap-8 mb-8">
                             <div className="bg-black rounded lg p-4">
                                 <Solution1LogoShort className="h-10 w-10 fill-white"  />
@@ -78,14 +83,13 @@ export default function Solution1() {
                                 <Solution1LogoFull className="h-10 w-32 fill-white" />
                             </div>
                         </div>
-                        <h4 className="text-lg font-bold mb-2">Development</h4>
-                        <div className="mb-8 md:mr-14">
-                            My framework of choice is React in combination with Nextjs<br/>
-                            Framer-motion was a interesting developer experience for implementing scroll based transitions and animations<br/>
-                            I will likely use the library again in the future.<br/>
-                            For the contact form I ended up using the shadcn components and used node-mailer as a backend solution for sending the emails<br/>
-                            In the end it took me a bit over a weekend to create.<br/>
-                        </div>
+                        <H4>Development</H4>
+                        <Paragraph>
+                            My framework of choice is Nextjs.<br/>
+                            Framer-motion was a nice developer experience for implementing scroll based transitions and animations<br/>
+                            I am likely to use this library again in the future.<br/>
+                            For the contact form I ended up using the shadcn components with react-hook-form and used node-mailer as a backend solution for sending the emails.<br/>
+                        </Paragraph>
                         <h4 className="text-lg font-bold mb-2">Links and information</h4>
                         <ul className="pl-4 list-disc mb-8">
                             <ExternalALink href="https://next-solution1.vercel.app">
