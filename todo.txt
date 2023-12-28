@@ -1,13 +1,12 @@
 Points:
-
+- Make navigation more exciting
 - Section scroll to top onclick navigation button
-- Top navbar on multiple views with appear transition
-- Add turn on/off video switch
 
 Optional
-- Automatic bio chat appear using npm package
 - Fix landing text bug
 - Finish theme and make a bit bold
+- Make camera move with mouse
+- Config menu with extra's
 
 Projects
 - Tracefy app
