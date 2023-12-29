@@ -7,6 +7,7 @@ import { motion } from 'framer-motion'
 import ProjectFramerAnimation from '@/components/projects/project-framer-animation'
 import { H4, Paragraph } from '@/components/typography'
 import { ImageDialog } from '@/components/image-dialog'
+import ImageCarousel from '@/components/image-carousel'
 
 const Solution1LogoFull = ({ ...props }) => (
     <svg {...props} width="47" height="18" viewBox="0 0 47 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,12 +43,13 @@ export default function Solution1() {
                         </div>
                     </div>
                     <div className="mt-4">
-                        <div className="xl:flex">
+                        <div className="grid xl:grid-cols-2">
                             <div className="mb-4 xl:mr-16">
                                 <H4>Introduction</H4>
                                 <Paragraph>
                                     This project came to life when I started playing with the idea of freelancing again.
-                                    But mostly I wanted to test my skills and see if I could create a brand and website within a weekend.
+                                    But mostly I wanted to test my skills and see if I could create a brand and website
+                                    within a weekend.
                                     It was also a great opportunity to play with framer-motion as an animation library.
                                 </Paragraph>
                                 <H4>Requirements</H4>
@@ -60,12 +62,18 @@ export default function Solution1() {
                                     </ul>
                                 </Paragraph>
                             </div>
-                            <div className="md:max-w-[400px] flex flex-col border border-green-600 mb-8">
-                                <ImageDialog src="/assets/projects/solution1/card.jpeg" alt="Solution 1">
-                                    <Image className="ml-auto" src="/assets/projects/solution1/card.jpeg" alt="Solution 1" height={300} width={1100} />
-                                </ImageDialog>
-                                <div className="flex justify-center py-2 gap-4 border-t border-t-green-600 flex-wrap">
-                                    {['react', 'tailwind', 'figma', 'typescript', 'framer-motion'].map((tech, i) => <div key={i} className="px-2 py-1 text-xs bg-red-400 rounded-3xl font-medium tracking-wider">{tech}</div>)}
+                            <div className="flex justify-end">
+                                <div className="border border-green-600 mb-8 w-full">
+                                    <ImageDialog src="/assets/projects/solution1/2.jpg" alt="Solution 1">
+                                        <Image className="ml-auto" src="/assets/projects/solution1/2.jpg"
+                                               alt="Solution 1" height={400} width={1200}/>
+                                    </ImageDialog>
+                                    <div
+                                        className="flex justify-center py-2 gap-4 border-t border-t-green-600 flex-wrap">
+                                        {['react', 'tailwind', 'figma', 'typescript', 'framer-motion'].map((tech, i) =>
+                                            <div key={i}
+                                                 className="px-2 py-1 text-xs bg-red-400 rounded-3xl font-medium tracking-wider">{tech}</div>)}
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -90,6 +98,7 @@ export default function Solution1() {
                             I am likely to use this library again in the future.<br/>
                             For the contact form I ended up using the shadcn components with react-hook-form and used node-mailer as a backend solution for sending the emails.<br/>
                         </Paragraph>
+                        <ImageCarousel imageUrls={['/assets/projects/solution1/1.jpg', '/assets/projects/solution1/2.jpg', '/assets/projects/solution1/3.jpg']} />
                         <h4 className="text-lg font-bold mb-2">Links and information</h4>
                         <ul className="pl-4 list-disc mb-8">
                             <ExternalALink href="https://next-solution1.vercel.app">

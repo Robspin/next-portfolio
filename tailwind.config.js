@@ -50,7 +50,6 @@ module.exports = {
       },
       animation: {
         "endless-scroll": 'horizontal-scroll 5s linear infinite',
-        "endless-scroll-delay": 'horizontal-scroll 2.5s linear infinite delay-[2.5]',
         "appear": 'opacity-appear 1s ease',
         "appear-80": 'opacity-appear-80 1s ease',
         "disappear": 'opacity-disappear 2.5s ease',

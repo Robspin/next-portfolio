@@ -43,7 +43,7 @@ const MinifiedProject = ({ name, slug, onClick, activeProject }: ProjectComponen
                 </button>}
                 <div className="h-full w-full absolute grayscale-[55%]">
                     <div className="h-40 w-full bg-orange-300 overflow-hidden">
-                        <Image src={`/assets/projects/${slug}/card.jpeg`} alt={name} className="object-cover" fill />
+                        <Image src={`/assets/projects/${slug}/card.jpeg`} alt={name} className="object-cover grayscale-[55%]" fill />
                     </div>
                 </div>
             </div>
