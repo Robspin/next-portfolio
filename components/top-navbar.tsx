@@ -12,10 +12,10 @@ import {
 } from "@/components/ui/navigation-menu"
 
 import MusicPlayer from '@/components/music-player'
-import Logo from '@/components/svgs/logo'
+import LogoFull from '@/components/svgs/logo-full'
 
 
-export default function Navbar() {
+export default function TopNavbar() {
     return (
         <div className="absolute flex justify-between items-center w-full p-3 max-sm:pl-0 md:p-5">
             <PopoutMenu />
@@ -33,35 +33,18 @@ const PopoutMenu = () => {
                         <div className="text-white font-bold tracking-[0.2em] cursor-pointer">MORE</div>
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
-                        <ul className="grid gap-3 p-6 w-[300px] md:w-[400px]">
-                            <li className="row-span-3">
+                        <ul className="space-y-3 p-6 w-[300px] md:w-[400px]">
+                            <li className="mb-2 bg-stone-900 rounded py-4">
                                 <NavigationMenuLink asChild>
-                                    <div
-                                        className="h-full w-full select-none flex-col rounded-md bg-gradient-to-br from-stone-900 to-stone-950 p-4 no-underline outline-none focus:shadow-md"
-                                    >
-                                        <div className="flex items-center">
-                                            <Logo height={50} width={50} />
-                                            <div className="ml-4">
-                                                <div className="mt-1 text-lg font-medium">
-                                                Robin Steeman
-                                                </div>
-                                                <p className="text-sm leading-tight dark:text-dark-text-secondary">
-                                                    I write javascript
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <LogoFull className="fill-stone-200" height={50} width={250} />
                                 </NavigationMenuLink>
                             </li>
                             <ListItem href="https://blog.robinsteeman.com" title="Blog">
                                 Link to my blog
                             </ListItem>
-                            {/*<ListItem href="/docs/installation" title="Installation">*/}
-                            {/*    How to install dependencies and structure your app.*/}
-                            {/*</ListItem>*/}
-                            {/*<ListItem href="/docs/primitives/typography" title="Typography">*/}
-                            {/*    Styles for headings, paragraphs, lists...etc*/}
-                            {/*</ListItem>*/}
+                            <ListItem href="https://snake-gamma.vercel.app/" title="Classic snake">
+                                Snake made in vanilla Javascript
+                            </ListItem>
                             <div className="flex justify-end text-sm leading-tight dark:text-dark-text-secondary">
                                 <p>
                                     100x visits
@@ -92,7 +75,7 @@ const ListItem = React.forwardRef<
                     {...props}
                 >
                     <div className="text-sm font-medium leading-none">{title}</div>
-                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                    <p className="line-clamp-2 text-sm leading-snug text-stone-400">
                         {children}
                     </p>
                 </a>
