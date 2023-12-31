@@ -17,7 +17,7 @@ const MobileNavigation = ({ view, setView, className }: Props) => {
         setTimeout(() => setHovered(false), 1000)
     }, [view])
 
-    const enlargementDuration = 0.5
+    const enlargementDuration = 0.3
 
     const containerVariants = {
         initial: { width: '50px', height: '50px' },
@@ -51,11 +51,11 @@ const MobileNavigation = ({ view, setView, className }: Props) => {
                 onClick={() => setHovered(true)}
                 onMouseEnter={() => setHovered(true)}
                 onMouseLeave={() => setHovered(false)}
-                className={`h-8 w-12 group transition-all delay-300 border border-white rounded-3xl pointer-events-auto flex justify-center items-center bg-black`}>
+                className={`h-8 w-12 group transition-all delay-75 border border-white rounded-3xl pointer-events-auto flex justify-center items-center bg-black`}>
                 <motion.div className="absolute pointer-events-none" variants={iconVariants} animate={hovered ? "animate" : "initial"}>
                     <Menu className="h-4 w-4 text-white" />
                 </motion.div>
-                <ul className={`flex flex-col gap-8 ${!hovered && 'pointer-events-none'}`}>
+                <ul className={`flex flex-col gap-8 ${!hovered && 'hidden'}`}>
                     {routes.map((link, index) => (
                         <motion.li
                             className={`${view === link.key ? 'text-white' : 'text-stone-400 cursor-pointer hover:text-white'} transition`}

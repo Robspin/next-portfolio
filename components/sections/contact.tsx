@@ -56,7 +56,7 @@ const Astronaut = ({ ...props }) => {
 const Contact = () => {
     return (
         <PageContainer className="translate-x-[100vw]">
-            <div className="lg:p-24 w-full h-full flex justify-center items-center flex-col">
+            <div className="lg:p-24 w-full h-full flex items-center flex-col">
                 <div className="h-52 w-full pointer-events-none -mt-8 max-md:w-full max-md:px-16">
                     <Canvas>
                         <directionalLight intensity={0.75} />

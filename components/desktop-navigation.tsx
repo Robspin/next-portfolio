@@ -14,7 +14,7 @@ const DesktopNavigation = ({ view, setView, className }: Props) => {
     const [hovered, setHovered] = useState(false)
 
     useEffect(() => {
-        if (view === 'landing') setHovered(true)
+        if (view === 'landing' || view === 'contact') setHovered(true)
     }, [view])
 
     const enlargementDuration = 0.5
@@ -47,9 +47,9 @@ const DesktopNavigation = ({ view, setView, className }: Props) => {
                 initial="initial"
                 animate={hovered ? "animate" : "initial"}
                 variants={containerVariants}
-                onMouseEnter={() => view !== "landing" && setHovered(true)}
-                onMouseLeave={() => view !== "landing" && setHovered(false)}
-                className={`h-8 w-12 group transition-all delay-300 ${view !== 'landing' && 'border border-white'} rounded-3xl pointer-events-auto flex justify-center items-center bg-black`}>
+                onMouseEnter={() => view !== "landing" && view !== "contact" && setHovered(true)}
+                onMouseLeave={() => view !== "landing" && view !== "contact" && setHovered(false)}
+                className={`h-8 w-12 group transition-all delay-300 ${view !== 'landing' && view !== 'contact' && 'border border-white bg-black'} rounded-3xl pointer-events-auto flex justify-center items-center`}>
                 <motion.div className="absolute pointer-events-none" variants={iconVariants} animate={hovered ? "animate" : "initial"}>
                     <Menu className="h-4 w-4 text-white rotate-90" />
                 </motion.div>

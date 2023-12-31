@@ -1,5 +1,4 @@
 "use client"
-
 import * as React from "react"
 import { cn } from "@/lib/utils"
 import {
@@ -10,6 +9,7 @@ import {
     NavigationMenuList,
     NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
+import Github from '@/components/svgs/github'
 
 import MusicPlayer from '@/components/music-player'
 import LogoFull from '@/components/svgs/logo-full'
@@ -19,7 +19,12 @@ export default function TopNavbar() {
     return (
         <div className="absolute flex justify-between items-center w-full p-3 max-sm:pl-0 md:p-5">
             <PopoutMenu />
-            <MusicPlayer />
+            <div className="flex items-center gap-1">
+                <a href="https://github.com/Robspin" target="_blank">
+                    <Github className="fill-white h-5 w-5 mt-[2px]" />
+                </a>
+                <MusicPlayer />
+            </div>
         </div>
     )
 }
