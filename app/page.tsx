@@ -2,13 +2,14 @@
 import MovingStars from "@/components/canvas/stars"
 import Scene from "@/components/canvas/scene"
 import { useState } from "react"
-import { NavigationClassTypes, View } from "@/utils/types"
+import { NavigationClassTypes, View } from "@/utils/routes"
 import Landing from '@/components/sections/landing'
 import AboutMe from '@/components/sections/about-me'
 import MyWork from '@/components/sections/my-work'
 import Contact from '@/components/sections/contact'
 import Loading from '@/components/loading'
-import Navigation from '@/components/navigation'
+import MobileNavigation from '@/components/mobile-navigation'
+import DesktopNavigation from '@/components/desktop-navigation'
 
 const SpaceBackground = () => (
     <div className="h-full w-full absolute bg-black">
@@ -40,7 +41,8 @@ export default function Home() {
             <MyWork />
             <Contact />
         </div>
-        <Navigation currentView={view} navigateTo={navigateTo} />
+        <DesktopNavigation view={view} setView={setView} className="max-md:hidden" />
+        <MobileNavigation view={view} setView={setView} className="md:hidden" />
         <Loading />
     </div>
   )

@@ -47,10 +47,9 @@ export default function Solution1() {
                             <div className="mb-4 xl:mr-16">
                                 <H4>Introduction</H4>
                                 <Paragraph>
-                                    This project came to life when I started playing with the idea of freelancing again.
-                                    But mostly I wanted to test my skills and see if I could create a brand and website
+                                    This project came to life when I wanted to test my skills and see if I could create a brand and website
                                     within a weekend.
-                                    It was also a great opportunity to play with framer-motion as an animation library.
+                                    It was also a great opportunity to try framer-motion as an animation solution.
                                 </Paragraph>
                                 <H4>Requirements</H4>
                                 <Paragraph>
