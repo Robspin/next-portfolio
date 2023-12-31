@@ -1,6 +1,6 @@
 import PageContainer from "@/components/page-container"
 import BioTimelineSwitcher from '@/components/bio-timeline-switcher'
-import { View } from '@/utils/types'
+import { View } from '@/utils/routes'
 
 type Props = {
     currentView: View

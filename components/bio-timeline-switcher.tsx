@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import Bio from '@/components/bio'
 import Timeline from '@/components/timeline'
 import Image from 'next/image'
-import { View } from '@/utils/types'
+import { View } from '@/utils/routes'
 
 type Props = {
     currentView: View

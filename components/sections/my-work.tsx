@@ -51,7 +51,7 @@ const MinifiedProject = ({ name, slug, onClick, activeProject }: ProjectComponen
     )
 }
 
-const projects: ProjectProps[] = [{ name: 'Tracefy App', slug: 'tracefy-app' }, { name: 'Solution 1', slug: 'solution1' }, { name: 'Tracefy Portal', slug: 'tracefy-portal' }, { name: 'Tracefy Backoffice', slug: 'tracefy-backoffice' }, { name: 'Project', slug: 'default' }, { name: 'Project', slug: 'default' }]
+const projects: ProjectProps[] = [{ name: 'Tracefy App', slug: 'tracefy-app' }, { name: 'Solution 1', slug: 'solution1' }]
 
 const MyWork = () => {
     const [activeProject, setActiveProject] = useState<ProjectSlug>('tracefy-app')

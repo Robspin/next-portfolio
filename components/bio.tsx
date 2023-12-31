@@ -2,7 +2,7 @@
 import { Dispatch, ReactNode, useEffect, useState } from 'react'
 import { calculateYearsFromDate } from '@/utils/datetime'
 import { TypeAnimation } from 'react-type-animation'
-import { View } from '@/utils/types'
+import { View } from '@/utils/routes'
 
 const TextContainer = ({ children, className }: { children: ReactNode, className?: string }) => (
     <div className={`bg-green-300 opacity-80 animate-appear-80 rounded border border-red-400 md:ml-7 p-4 md:p-8 md:text-lg ${className}`}>
