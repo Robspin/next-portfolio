@@ -11,7 +11,7 @@ export default function Loading() {
     useEffect(() => {
         if (!backgroundLoading) {
             setTimeout(() => setEmptyAnimationStarted(true), 1500)
-            setTimeout(() => setStartFadeOut(true), 3100)
+            setTimeout(() => setStartFadeOut(true), 2600)
         }
     }, [backgroundLoading])
 

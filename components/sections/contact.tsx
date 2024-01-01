@@ -42,7 +42,7 @@ const Contact = () => {
     return (
         <PageContainer className="translate-x-[100vw]">
             <div className="lg:p-24 w-full h-full flex items-center flex-col">
-                <div className="h-52 w-full pointer-events-none -mt-8 max-md:w-full max-md:px-16">
+                <div className="h-52 w-full flex pointer-events-none -mt-8">
                     <Canvas>
                         <directionalLight intensity={0.75} />
                         <ambientLight intensity={0.25} />

@@ -1,8 +1,10 @@
 "use client"
 import { useFrame, useThree } from '@react-three/fiber'
 import { useEffect, useState } from 'react'
+import { renderedOnLargeScreen } from '@/utils/helpers'
 
 export default function MouseCameraController() {
+    if (!renderedOnLargeScreen()) return null
     const { camera } = useThree()
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 

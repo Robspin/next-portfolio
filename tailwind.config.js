@@ -54,7 +54,7 @@ module.exports = {
         "appear-80": 'opacity-appear-80 1s ease',
         "disappear": 'opacity-disappear 2.5s ease',
         "fill": 'fill-width 1s ease-in-out',
-        "empty": 'empty-width 1.5s ease-in'
+        "empty": 'empty-width 1s ease-in'
       }
     },
   },

@@ -1,4 +1,5 @@
 Points:
+- Reduce loading animation time
 - Section scroll to top onclick navigation button
 
 Optional
