@@ -10,10 +10,12 @@ import Contact from '@/components/sections/contact'
 import Loading from '@/components/loading'
 import MobileNavigation from '@/components/mobile-navigation'
 import DesktopNavigation from '@/components/desktop-navigation'
+import MouseCameraController from '@/components/canvas/mouse-camera-controller'
 
 const SpaceBackground = () => (
     <div className="h-full w-full absolute bg-black">
         <Scene>
+            <MouseCameraController />
             <MovingStars />
         </Scene>
     </div>

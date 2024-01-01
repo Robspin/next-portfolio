@@ -10,6 +10,7 @@ import { AnimatePresence } from 'framer-motion'
 import TracefyApp from '@/components/projects/tracefy-app'
 import TracefyBackoffice from '@/components/projects/tracefy-backoffice'
 import TracefyPortal from '@/components/projects/tracefy-portal'
+import { renderedOnLargeScreen } from '@/utils/helpers'
 
 type ProjectSlug = 'default' | 'solution1' | 'tracefy-app' | 'tracefy-portal' | 'tracefy-backoffice'
 type ProjectProps = {
@@ -24,15 +25,10 @@ interface ProjectComponentProps extends ProjectProps {
 
 const MinifiedProject = ({ name, slug, onClick, activeProject }: ProjectComponentProps) => {
     const isActiveProject = slug === activeProject
-    let isLargeScreen = true
-
-    if (typeof window !== 'undefined') {
-        isLargeScreen = window.innerWidth > 600
-    }
 
     return (
         <Tilt className={`group w-[200px] h-[168px] shrink-0 bg-red-400 p-1 rounded parallax-effect transition ${isActiveProject ? 'shadow-custom' : 'shadow-none'} shadow-violet-200`} perspective={500}
-              tiltReverse tiltEnable={isLargeScreen} glareEnable={true} glareMaxOpacity={0.8} glareColor="lightblue" glarePosition="all"
+              tiltReverse tiltEnable={renderedOnLargeScreen()} glareEnable={true} glareMaxOpacity={0.8} glareColor="lightblue" glarePosition="all"
               glareBorderRadius="4px" tiltMaxAngleX={15} tiltMaxAngleY={15}>
             <div onClick={onClick} className="h-40 parallax-effect flex justify-center rounded-t bg-black">
                 {!isActiveProject && <button className="h-40 w-[120%] inner-element flex justify-center items-center">
