@@ -1,12 +1,9 @@
 Points:
-- Make navigation more exciting
 - Section scroll to top onclick navigation button
 
 Optional
 - Fix landing text bug
 - Finish theme and make a bit bold
-- Make camera move with mouse
-- Config menu with extra's
 
 Projects
 - Tracefy app
