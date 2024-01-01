@@ -10,10 +10,17 @@ import {
     NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 import Github from '@/components/svgs/github'
-
 import MusicPlayer from '@/components/music-player'
 import LogoFull from '@/components/svgs/logo-full'
+import { useEffect, useState } from 'react'
 
+const getViews = async () => {
+    try {
+        return await (await fetch(`${process.env.NEXT_PUBLIC_VIEWS_API_URL}?key=next-portfolio`, { cache: 'no-store' })).json()
+    } catch (e) {
+        console.log(e)
+    }
+}
 
 export default function TopNavbar() {
     return (
@@ -30,6 +37,17 @@ export default function TopNavbar() {
 }
 
 const PopoutMenu = () => {
+    const [viewCount, setViewCount] = useState<undefined | number>(undefined)
+
+    useEffect(() => {
+        ;(async () => {
+            if (!viewCount) {
+                const viewCount = await getViews()
+                setViewCount(viewCount ?? 0)
+            }
+        })()
+    }, [])
+
     return (
         <NavigationMenu>
             <NavigationMenuList>
@@ -50,11 +68,11 @@ const PopoutMenu = () => {
                             <ListItem href="https://snake-gamma.vercel.app/" title="Classic snake">
                                 Snake made in vanilla Javascript
                             </ListItem>
-                            <div className="flex justify-end text-sm leading-tight dark:text-dark-text-secondary">
+                            {viewCount && <div className="flex justify-end text-sm leading-tight dark:text-dark-text-secondary">
                                 <p>
-                                    100x visits
+                                    {viewCount}x visits
                                 </p>
-                            </div>
+                            </div>}
                         </ul>
                     </NavigationMenuContent>
                 </NavigationMenuItem>

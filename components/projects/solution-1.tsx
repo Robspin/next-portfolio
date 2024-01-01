@@ -97,7 +97,7 @@ export default function Solution1() {
                             I am likely to use this library again in the future.<br/>
                             For the contact form I ended up using the shadcn components with react-hook-form and used node-mailer as a backend solution for sending the emails.<br/>
                         </Paragraph>
-                        <ImageCarousel imageUrls={['/assets/projects/solution1/1.jpg', '/assets/projects/solution1/2.jpg', '/assets/projects/solution1/3.jpg']} />
+                        <ImageCarousel imageUrls={['/assets/projects/solution1/1.jpg', '/assets/projects/solution1/2.jpg', '/assets/projects/solution1/3.jpg', '/assets/projects/solution1/lighthouse-score.png']} />
                         <h4 className="text-lg font-bold mb-2">Links and information</h4>
                         <ul className="pl-4 list-disc mb-8">
                             <ExternalALink href="https://next-solution1.vercel.app">

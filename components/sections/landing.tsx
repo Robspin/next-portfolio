@@ -2,7 +2,7 @@ import PageContainer from "@/components/page-container"
 import TopNavbar from '@/components/top-navbar'
 
 
-const Landing = () => {
+export default function Landing() {
 
     return (
         <PageContainer>
@@ -14,5 +14,3 @@ const Landing = () => {
         </PageContainer>
     )
 }
-
-export default Landing
