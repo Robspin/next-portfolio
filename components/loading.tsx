@@ -16,12 +16,12 @@ export default function Loading() {
     }, [backgroundLoading])
 
     if (!startFadeOut) return (
-        <div className="absolute w-screen min-h-screen bg-black flex items-center justify-center">
+        <div className="absolute w-screen h-screen bg-black flex items-center justify-center">
             <div className="w-7/12 h-[2px] relative">
                 <div className={`h-full bg-white absolute ${emptyAnimationStarted ? 'animate-empty' : 'animate-fill left-0 right-0'}`} />
             </div>
         </div>
     )
 
-    if (startFadeOut) return <div className="w-screen min-h-screen bg-black pointer-events-none animate-disappear opacity-0" />
+    if (startFadeOut) return <div className="w-screen h-screen bg-black pointer-events-none animate-disappear opacity-0" />
 }
