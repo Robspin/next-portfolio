@@ -46,7 +46,7 @@ const Contact = () => {
                     <Canvas>
                         <directionalLight intensity={0.75} />
                         <ambientLight intensity={0.25} />
-                        <Astronaut position={[-2.5,-3.2,0]} rotation={[-0.4, 0, 0]} />
+                        <Astronaut position={[-2.5,-3,0]} rotation={[-0.4, 0, 0]} scale={0.7} />
                         <Alien position={[2.5, -2.7, 0]} scale={2.8} rotation={[-0.4, 0, 0]} />
                     </Canvas>
                 </div>
