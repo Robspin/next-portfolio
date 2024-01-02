@@ -31,9 +31,6 @@ const viewPositionClass: { [key in View]: NavigationClassTypes } = {
 export default function Home() {
     const [view, setView] = useState<View>('landing')
 
-    const navigateTo = (view: View) => setView(view)
-
-
   return (
     <div className="min-h-screen w-screen overflow-hidden">
         <SpaceBackground />

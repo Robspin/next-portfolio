@@ -9,7 +9,7 @@ import ExternalALink from '@/components/external-a-link'
 export default function DefaultProject() {
     return (
     <ProjectFramerAnimation>
-        <div className="max-w-[1048px] max-lg:mx-6 py-6 lg:py-24 lg:h-screen lg:overflow-auto">
+        <div className="max-w-[1048px] max-lg:mx-6 py-6 lg:py-24 lg:min-h-screen lg:overflow-auto">
             <div className="bg-green-300 opacity-80 lg:mr-12 rounded p-8 border border-red-400">
                 <div className="flex justify-between items-center border-b border-b-green-600">
                     <h2 className="tracking-tighter max-sm:text-5xl text-6xl pr-2 font-bold">Project title</h2>

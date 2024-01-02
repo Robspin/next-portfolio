@@ -9,7 +9,7 @@ type Props = {
 const AboutMe = ({ currentView }: Props) => {
     return (
         <PageContainer className="translate-y-[100vh]">
-            <div className="h-screen w-screen flex justify-center overflow-y-scroll">
+            <div className="min-h-screen w-screen flex justify-center overflow-y-scroll">
                 <BioTimelineSwitcher currentView={currentView} />
             </div>
         </PageContainer>

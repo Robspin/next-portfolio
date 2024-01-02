@@ -69,7 +69,7 @@ const MyWork = () => {
 
     return (
         <PageContainer className="translate-x-[-100vw]">
-            <div className="max-lg:flex-col max-lg:flex overflow-scroll flex h-screen">
+            <div className="max-lg:flex-col max-lg:flex overflow-scroll flex min-h-screen">
                 <div className="w-screen lg:w-[300px] max-lg:py-6 max-lg:px-6 lg:py-24 lg:h-full shrink-0 flex lg:flex-col gap-10 overflow-auto items-center">
                     {projects.map(({ name, slug }, index) =>
                         <MinifiedProject name={name} slug={slug} activeProject={activeProject} key={index} onClick={() => setActiveProject(slug)} />)}
