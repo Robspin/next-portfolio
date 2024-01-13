@@ -1,5 +1,4 @@
 "use client"
-import Link from "next/link";
 import { useEffect } from "react";
 
 const Matrix = () => {
@@ -55,18 +54,6 @@ const Matrix = () => {
             canvas.width = innerWidth
             canvas.height = innerHeight;
         }
-
-        // setTimeout(() => {
-        //     setInterval(() => {
-        //         context.fillStyle = `rgba(0, 0, 0, 1)`;
-        //         context.fillText("████████████████", canvas.width - 100, canvas.height - 30);
-        //         context.fillStyle = 'rgba(255,255,255, 1)';
-        //         context.font = 22 + 'px monospace';
-        //         context.textAlign = "center";
-        //         context.fillText("GREENTEMPLE", canvas.width - 100, canvas.height - 30);
-        //     }, 50)
-        // }, 5000)
-
 
         setInterval(draw, 30);
     }, [])
