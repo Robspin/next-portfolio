@@ -32,7 +32,7 @@ const timelineData: TimelineItemProps[] = [
     {
         title: "Technical Specialist at Rijnwoud, working on Skoda & Seat cars",
         timeframe: '2009 - 2018',
-        description: 'From a rookie car mechanic to a certified Technical Specialist I learned how to find and fix mechanical and electronic issues',
+        description: 'From a rookie car mechanic to a certified Technical Specialist I learned how to find and fix mechanical and electronic issues.',
         iconName: 'car'
     },
     {
@@ -42,21 +42,21 @@ const timelineData: TimelineItemProps[] = [
         iconName: 'plane'
     },
     {
-        title: "Learning front-end development & freelancing",
+        title: "Learning front-end development and freelancing",
         timeframe: 'March 2020 - June 2021',
         description: 'Having attained conversational level Japanese, this gave me the confidence to pursue a new career path. I started learning front-end development from scratch. And after learning the basics moving to react. My goal was speedrun the path of becoming a developer. After building several small projects I started freelancing and building a portfolio.',
         iconName: 'graduation-cap'
     },
     {
-        title: "Front-end developer Tracefy",
+        title: "Front-end developer at Tracefy",
         timeframe: 'June 2021 - December 2023',
         description: 'Despite having no formal development degree, Tracefy liked me and my portfolio enough to hire me. This is where I attained the bulk of my developer experience. And I still do freelancing work for them to this day.',
         iconName: 'code'
     },
     {
-        title: "Front-end developer as a Freelancer",
+        title: "Front-end developer at R Steeman Software Development",
         timeframe: 'January 2024 - Now',
-        description: 'I am currently working as a freelancer, interested in working together? Feel free to reach out.',
+        description: 'I started my own company! interested in working together? Feel free to reach out.',
         iconName: 'code'
     },
 ]

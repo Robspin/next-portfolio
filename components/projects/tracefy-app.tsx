@@ -90,7 +90,7 @@ export default function TracefyApp() {
                             I have been pleased with the Expo workflow which allows for a really fast and pleasant cross platform mobile development experience.
                             When given the choice I would choose Expo again in the future.
                         </Paragraph>
-                        <ImageCarousel imageUrls={['/assets/projects/tracefy-app/figma-1.png', '/assets/projects/tracefy-app/figma-1.png', '/assets/projects/tracefy-app/figma-1.png', '/assets/projects/tracefy-app/figma-1.png']} />
+                        <ImageCarousel imageUrls={['/assets/projects/tracefy-app/app-screen.jpeg', '/assets/projects/tracefy-app/figma-1.png']} />
                         <H4>Links and information</H4>
                         <ul className="pl-4 list-disc mb-8">
                             <ExternalALink href="https://docs.expo.dev/">

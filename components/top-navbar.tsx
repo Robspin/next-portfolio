@@ -13,6 +13,7 @@ import Github from '@/components/svgs/github'
 import MusicPlayer from '@/components/music-player'
 import LogoFull from '@/components/svgs/logo-full'
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 const getViews = async () => {
     try {
@@ -59,20 +60,24 @@ const PopoutMenu = () => {
                         <ul className="space-y-3 p-6 w-[300px] md:w-[400px]">
                             <li className="mb-2 bg-stone-900 rounded py-4">
                                 <NavigationMenuLink asChild>
-                                    <LogoFull className="fill-stone-200" height={50} width={250} />
+                                    <LogoFull className="fill-stone-200" height={50} width={250}/>
                                 </NavigationMenuLink>
                             </li>
                             <ListItem href="https://blog.robinsteeman.com" title="Blog">
                                 Link to my blog
                             </ListItem>
+                            <ListItem href="https://robinsteeman.com/more/matrix" title="Enter the matrix">
+                                A matrix experience with html canvas en javascript
+                            </ListItem>
                             <ListItem href="https://snake-gamma.vercel.app/" title="Classic snake">
                                 Snake made in vanilla Javascript
                             </ListItem>
-                            {viewCount && <div className="flex justify-end text-sm leading-tight dark:text-dark-text-secondary">
-                                <p>
-                                    {viewCount}x visits
-                                </p>
-                            </div>}
+                            {viewCount &&
+                                <div className="flex justify-end text-sm leading-tight dark:text-dark-text-secondary">
+                                    <p>
+                                        {viewCount}x visits
+                                    </p>
+                                </div>}
                         </ul>
                     </NavigationMenuContent>
                 </NavigationMenuItem>
@@ -84,7 +89,7 @@ const PopoutMenu = () => {
 const ListItem = React.forwardRef<
     React.ElementRef<"a">,
     React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
+>(({className, title, children, ...props}, ref) => {
     return (
         <li>
             <NavigationMenuLink asChild>

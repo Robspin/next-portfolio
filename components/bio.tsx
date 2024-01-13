@@ -34,15 +34,15 @@ const Bio = ({ currentView, setBioAnimationFinished, bioAnimationFinished }: Pro
                      <TypeAnimation speed={70} style={{whiteSpace: 'pre-line', display: 'block'}} cursor={false}
                                 className={CURSOR_CLASS_NAME}
                                 sequence={[
-                                    2000, `Hi! Robin here.`,
-                                    2000, `Hi! Robin here.
-                                    Let me share a bit about myself.`,
+                                    1000, `Hi! Robin here.`,
                                     1000, `Hi! Robin here.
+                                    Let me share a bit about myself.`,
+                                    600, `Hi! Robin here.
                                     Let me share a bit about myself.
                                     A while ago I used to fix cars for a living.
                                     Nowadays I am a Javascript fanboy who likes tinkering in frontend code.
                                     Passionate about technologies like react, react-native, threejs and deno.`,
-                                    1000, (el) => {
+                                    600, (el) => {
                                         el?.classList.remove(CURSOR_CLASS_NAME)
                                         setStep(2)
                                     }
