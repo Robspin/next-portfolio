@@ -71,11 +71,7 @@ const Matrix = () => {
         setInterval(draw, 30);
     }, [])
 
-    return (
-        <Link href="/">
-            <canvas id="matrix" height="100vh" width="100vw" />
-        </Link>
-    )
+    return <canvas id="matrix" height="100vh" width="100vw" />
 }
 
 export default Matrix
