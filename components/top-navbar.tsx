@@ -63,15 +63,15 @@ const PopoutMenu = () => {
                                     <LogoFull className="fill-stone-200" height={50} width={250}/>
                                 </NavigationMenuLink>
                             </li>
-                            <ListItem href="https://blog.robinsteeman.com" title="Blog">
+{/*                             <ListItem href="https://blog.robinsteeman.com" title="Blog">
                                 Link to my blog
-                            </ListItem>
+                            </ListItem> */}
                             <ListItem href="https://robinsteeman.com/more/matrix" title="Enter the matrix">
                                 A matrix experience with html canvas en javascript
                             </ListItem>
-                            <ListItem href="https://snake-gamma.vercel.app/" title="Classic snake">
+{/*                             <ListItem href="https://snake-gamma.vercel.app/" title="Classic snake">
                                 Snake made in vanilla Javascript
-                            </ListItem>
+                            </ListItem> */}
                             {viewCount &&
                                 <div className="flex justify-end text-sm leading-tight dark:text-dark-text-secondary">
                                     <p>
