@@ -69,9 +69,9 @@ const PopoutMenu = () => {
                             <ListItem href="https://robinsteeman.com/more/matrix" title="Enter the matrix">
                                 A matrix experience with html canvas en javascript
                             </ListItem>
-{/*                             <ListItem href="https://snake-gamma.vercel.app/" title="Classic snake">
+                            <ListItem href="https://snake-rho-nine.vercel.app/" title="Classic snake">
                                 Snake made in vanilla Javascript
-                            </ListItem> */}
+                            </ListItem>
                             {viewCount &&
                                 <div className="flex justify-end text-sm leading-tight dark:text-dark-text-secondary">
                                     <p>
