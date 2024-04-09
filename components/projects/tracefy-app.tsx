@@ -48,8 +48,8 @@ export default function TracefyApp() {
                             <div>
                                 <div className="flex justify-end">
                                     <div className="border border-green-600 mb-8 w-full">
-                                        <ImageDialog src="/assets/projects/tracefy-app/figma-1.png" alt="Tracefy App">
-                                            <Image src="/assets/projects/tracefy-app/figma-1.png" alt="Tracefy App"
+                                        <ImageDialog src="/assets/projects/tracefy-app/app-store.png" alt="Tracefy App">
+                                            <Image src="/assets/projects/tracefy-app/app-store.png" alt="Tracefy App"
                                                    height={400} width={1200}/>
                                         </ImageDialog>
                                         <div className="flex justify-center py-2 gap-4 border-t border-t-green-600 flex-wrap">
@@ -90,9 +90,15 @@ export default function TracefyApp() {
                             I have been pleased with the Expo workflow which allows for a really fast and pleasant cross platform mobile development experience.
                             When given the choice I would choose Expo again in the future.
                         </Paragraph>
-                        <ImageCarousel imageUrls={['/assets/projects/tracefy-app/app-screen.jpeg', '/assets/projects/tracefy-app/figma-1.png']} />
+                        <ImageCarousel imageUrls={['/assets/projects/tracefy-app/ios-1.png', '/assets/projects/tracefy-app/ios-2.png', '/assets/projects/tracefy-app/ios-3.png', '/assets/projects/tracefy-app/ios-4.png', '/assets/projects/tracefy-app/ios-5.png', '/assets/projects/tracefy-app/ios-6.png', '/assets/projects/tracefy-app/figma-1.png']} />
                         <H4>Links and information</H4>
                         <ul className="pl-4 list-disc mb-8">
+                            <ExternalALink href="https://apps.apple.com/nl/app/tracefy-solo/id6469999730?l=en-GB">
+                                <li>App store link</li>
+                            </ExternalALink>
+                            <ExternalALink href="https://play.google.com/store/apps/details?id=com.tracefy.tracefy.solo">
+                                <li>Play store link</li>
+                            </ExternalALink>
                             <ExternalALink href="https://docs.expo.dev/">
                                 <li>Expo documentation</li>
                             </ExternalALink>
