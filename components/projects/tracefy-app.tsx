@@ -12,7 +12,7 @@ export default function TracefyApp() {
             <div className="max-w-[1048px] max-lg:mx-6 py-6 lg:py-24 lg:h-screen lg:overflow-auto">
                 <div className="bg-green-300 opacity-80 lg:mr-12 rounded p-8 border border-red-400">
                     <div className="flex justify-between items-center border-b border-b-green-600">
-                        <H2>Tracefy App - Solo & Pro</H2>
+                        <H2>Tracefy Solo</H2>
                         <MobileIcon className="h-10 w-10 fill-gray-700 max-sm:hidden" />
                     </div>
                     <div className="flex max-md:flex-col justify-between mb-6">
@@ -24,26 +24,24 @@ export default function TracefyApp() {
                                 <H4>Introduction</H4>
                                 <Paragraph>
                                     One of my biggest projects while working at Tracefy was the creation of the new
-                                    consumer app('s).<br/>
-                                    Tracefy is a Netherlands based company which anti theft solutions mainly focussed on
-                                    e-bikes.
+                                    consumer app.<br/>
+                                    Tracefy is a Netherlands based company which focuses on anti theft solutions for e-bikes.
                                     Their main product is a tracker which which is sold through local bicycle shops.
                                     After purchase the customer can download and connect the Tracefy app to their tracker.
                                 </Paragraph>
                                 <Paragraph>
-                                    The app can be used for several things, for example viewing the current bike
-                                    location or viewing your past trips.
+                                    The app can be used for viewing the current bike location.
                                     But most importantly if the bicycle gets stolen. It can be used to activate
                                     Tracefy's recovery service.
                                     This means a security team member will go out and recover your bike for you!
                                 </Paragraph>
-                                <H4>Wait there's two?</H4>
-                                <Paragraph>
-                                    Far into the development of the Tracefy app a new hardware product was being developed.
-                                    Namely a tracker called Tracefy Solo, a lighter version of Tracefy's main product
-                                    (now called the Tracefy Pro).
-                                    This meant another lighter version mobile app also needed to be built.
-                                </Paragraph>
+                                {/*<H4>Wait there's two?</H4>*/}
+                                {/*<Paragraph>*/}
+                                {/*    Far into the development of the Tracefy app a new hardware product was being developed.*/}
+                                {/*    Namely a tracker called Tracefy Solo, a lighter version of Tracefy's main product*/}
+                                {/*    (now called the Tracefy Pro).*/}
+                                {/*    This meant another lighter version mobile app also needed to be built.*/}
+                                {/*</Paragraph>*/}
                             </div>
                             <div>
                                 <div className="flex justify-end">
@@ -63,7 +61,7 @@ export default function TracefyApp() {
                         </div>
                         <H4>Design</H4>
                         <Paragraph>
-                            Even though my ux/ui experience was lacking at the time. I was also given the task of the
+                            Even though my designing experience was lacking at the time. I was also given the task of the
                             design process.
                             This was a lengthy process of doing customer research and collecting data.
                             Multiple design iterations, a brief collaboration with an external designer and starting
@@ -76,10 +74,8 @@ export default function TracefyApp() {
                         <Paragraph>
                             As an experienced react developer I chose expo (react-native) as my framework for app
                             development.
-                            We at Tracefy were low on developer capacity so a large part of the development of the Pro
-                            app was me working together two developers from an app agency.
-                            Helpful with their app building experience they did not however have any prior react-native
-                            experience.
+                            Also before this project I had gained experience with leading two members of an external company on a similar app project using expo.
+                            Those devs were from an app agency but had no prior experience with expo nor react.
                             It was up to me to teach them the basics and best practices.
                         </Paragraph>
                         <Paragraph>
